@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - deny
+  - ask_order_status
+  - provide_email
+  - provide_phone
+  - goodbye
+  - bot_challenge
+  
+  
+entities:
+  - order_id
+  - email
+  - phone
+
+slots:
+  order_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: order_id
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+  phone:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: phone
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+  utter_ask_for_order_id:
+  - text: "Please provide your order ID to check the status."
+  utter_ask_for_email:
+  - text: "In this case. Could you please share with me your email?"
+  utter_ask_for_phone:
+    - text: "In this case. Could you please share with me your phone number?"
+ 
+  utter_order_follow_up:
+  - text: "Is there anything else you would like to know about your order?"
+  utter_iamabot:
+  - text: "I am a bot, here to assist you!"
+  utter_email_provided:
+  - text: "Thank you for providing your email address, i will check up it for you."
+  utter_email_not_provided:
+  - text: "Sorry, Without the Order ID and the email, we cannot find your order."
+actions:
+  - action_check_order_status
+  - action_check_email
+  - action_check_phone
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

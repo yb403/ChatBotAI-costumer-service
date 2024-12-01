@@ -1,0 +1,51 @@
+# Rasa-specific files
+.model/
+logs/
+*.db
+*.sqlite
+*.tar.gz
+*.tar
+*.pkl
+*.tar.bz2
+*.yaml
+
+# Python specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+env/
+env.bak/
+venv.bak/
+
+# Editor files (e.g., VSCode, PyCharm)
+.vscode/
+.rasa/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# MacOS files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Rasa Action Server logs
+action_server_log/
+
+# Temp files created by other tools
+*.bak
+*.swp
+*.swo
+
+# Hidden files that might get created by system or IDE
+*~

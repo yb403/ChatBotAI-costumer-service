@@ -1,0 +1,95 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+- intent: ask_order_status
+  examples: |
+    - Where is my order?
+    - Can you track my order?
+    - What is the status of my order?
+    - I want to know when my order will arrive.
+    - Can you tell me if my order has been shipped?
+    - Is my order out for delivery?
+    - How do I check the status of my order?
+    - My order ID is [12345](order_id).
+    - What's the delivery date for my order?
+    - I haven't received my order yet. Can you check?
+    - Can you confirm my order details?
+    - Is there any update on my order status?
+    - How can I find out if my order is delayed?
+    - I want to check the status of my order with ID [12345](order_id)
+    - Can you track my order? The order ID is [67890](order_id)
+    - What's the status of order number [54321](order_id)?
+    - Where is my order with ID [98765](order_id)?
+
+- intent: provide_email
+  examples: |
+    - My email address is [john.doe@example.com](email)
+    - You can contact me at [jane.doe@example.com](email)
+    - My email is [test_user@gmail.com](email)
+    - Send the information to [someone123@yahoo.com](email)
+    - I'll give you my email: [user@domain.com](email)
+    - Here is my email: [contact@service.com](email)
+    - [user@company.org](email) is my email address
+    - Can you email me at [me@example.org](email)?
+    - Use [support@website.com](email) for order confirmation
+    - Please send the details to [customer@shop.com](email)
+    
+- intent: provide_phone
+  examples: |
+    - My phone number is [+212 610-730592](phone)
+    - My number is [+212 610-730592](phone)
+    - Here's my number [+212 610-730592](phone)
+    - You can reach me at [+212 610-730592](phone)
+    - Here's my phone number: [123-456-7890](phone)
+    - Contact me at [0699304036](phone)
+    - I'll give you my phone number: [+212 699304036](phone)
+    - My phone is [0699304036](phone)
+    - My phone is [0699304036](phone)
+
+    - Call me at [+212 06 99 30 40 36](phone)
+    - Use [+212 610-730592](phone) to reach me
+    - [0699304036](phone) is my phone number
+    - Can you call me at [0599304036](phone)?
+- intent: deny
+  examples: |
+    - no
+    - sorry, i don't 
+    - i don't know
+    - i don't have
+    - i don't know my order id
+    - i don't know my email
+    - i don't know my phone
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later

@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+
+- story: user ask for his order - he gave order id first
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order_status
+    entities:
+      - order_id: "12345"
+  - action: action_check_order_status
+  - action: utter_order_follow_up
+
+
+- story: user ask for his order - i ask for order id he give
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order_status
+  - action: utter_ask_for_order_id
+  - intent: ask_order_status
+    entities:
+      - order_id: "12345"
+  - action: action_check_order_status
+  - action: utter_order_follow_up
+
+
+
+
+
+- story: user ask for his order - he don't know order id, so he provide email
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order_status
+  - action: utter_ask_for_order_id
+  - intent: deny
+  - action: utter_ask_for_email
+  - intent: provide_email
+    entities:
+      - email: "user@domain.com"
+  - action: utter_email_provided
+  - action: action_check_email
+
+
+- story: user ask for his order - he doesn't know order ID or email, provides phone number
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order_status
+  - action: utter_ask_for_order_id
+  - intent: deny
+  - action: utter_ask_for_email
+  - intent: deny
+  - action: utter_ask_for_phone
+  - intent: provide_phone
+    entities:
+      - phone: "0699304036"
+  - action: utter_email_provided
+  - action: action_check_phone
+
+- story: user ask for his order - he don't know order id and he don't know email
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order_status
+  - action: utter_ask_for_order_id
+  - intent: deny
+  - action: utter_ask_for_email
+  - intent: deny
+  - action: utter_ask_for_phone
+  - intent: deny
+  - action: utter_email_not_provided
+  - action: utter_goodbye
+
+
