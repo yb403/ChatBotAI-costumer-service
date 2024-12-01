@@ -30,7 +30,7 @@ class ActionCheckEmail(Action):
         if email and re.match(email_pattern, email):
             
             
-            dispatcher.utter_message(text=f"The email {email} is valid eeee.")
+            dispatcher.utter_message(text=f"The email {email} is valid.")
         else:
             dispatcher.utter_message(text="Sorry, the provided email seems invalid. Please provide a valid email address.")
 
