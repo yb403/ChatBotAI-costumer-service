@@ -32,9 +32,11 @@ nlu:
 - intent: ask_elements
   examples: |
     - What are the elements in [Introduction to Programming](module)?
+    - What are the elements in [Fluid Mechanics](module)?
     - Can you list the elements of [Thermodynamics](module)?
     - Tell me the elements in the module [Advanced Dynamics](module).
     - List the elements of the module [Material Science](module).
+    - List the elements of the module [Fluid Mechanics](module).
 - intent: ask_teacher
   examples: |
     - Who teaches [Data Structures](element)?

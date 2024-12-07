@@ -27,7 +27,7 @@ stories:
   - action: action_list_elements
   - slot_was_set:
       - module: null
-      
+
 - story: ask about semesters and modules in different sectors
   steps:
   - intent: ask_semesters
@@ -54,3 +54,30 @@ stories:
   - action: action_list_modules
   - slot_was_set:
       - semester: null
+
+- story: ask about modules and elements in different modules
+  steps:
+  - intent: ask_modules
+    entities:
+      - semester: null  # The user can specify any semester dynamically
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null
+  - intent: ask_elements
+    entities:
+      - module: null  # The user can specify any module dynamically
+  - action: action_list_elements
+  - slot_was_set:
+      - module: null
+  - intent: ask_modules
+    entities:
+      - semester: null
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null
+  - intent: ask_elements
+    entities:
+      - module: null
+  - action: action_list_elements
+  - slot_was_set:
+      - module: null
