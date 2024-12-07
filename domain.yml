@@ -1,66 +1,62 @@
 version: "3.1"
-
 intents:
-  - greet
-  - deny
-  - ask_order_status
-  - provide_email
-  - provide_phone
-  - goodbye
-  - bot_challenge
-  
-  
+  - ask_sectors
+  - ask_semesters
+  - ask_modules
+  - ask_elements
+  - ask_teacher
+
+
 entities:
-  - order_id
-  - email
-  - phone
-  
+  - sector
+  - semester
+  - module
+  - element
 
 slots:
-  order_id:
+  sector:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
       - type: from_entity
-        entity: order_id
-  email:
+        entity: sector
+  semester:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
       - type: from_entity
-        entity: email
-  phone:
+        entity: semester
+  module:
     type: text
-    influence_conversation: false
     mappings:
       - type: from_entity
-        entity: phone
-  
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+        entity: module
+  element:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: element
 
+responses:
+  utter_list_sectors:
+    - text: "The available sectors are: {sectors}"
+  utter_list_semesters:
+    - text: "The semesters in {sector} are: {semesters}"
+  utter_list_modules:
+    - text: "The modules in {semester} are: {modules}"
+  utter_list_teacher:
+    - text: "The professor for {element} is {teacher}."
   utter_goodbye:
-  - text: "Bye"
-  utter_ask_for_order_id:
-  - text: "Please provide your order ID to check the status."
-  utter_ask_for_email:
-  - text: "In this case. Could you please share with me your email?"
-  utter_ask_for_phone:
-    - text: "In this case. Could you please share with me your phone number?"
- 
-  utter_order_follow_up:
-  - text: "Is there anything else you would like to know about your order?"
+    - text: "Bye"
   utter_iamabot:
-  - text: "I am a bot, here to assist you!"
-  utter_email_provided:
-  - text: "Thank you for providing your email address, i will check up it for you."
-  utter_email_not_provided:
-  - text: "Sorry, Without the Order ID and the email, we cannot find your order."
+    - text: "yes im a bot"
+
+
+  utter_greet:
+    - text: "Hi there!"
 actions:
-  - action_check_order_status
-  - action_check_email
-  - action_check_phone
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - action_list_sectors
+  - action_list_semesters
+  - action_list_modules
+  - action_list_elements
+  - action_list_teacher

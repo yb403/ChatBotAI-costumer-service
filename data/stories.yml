@@ -1,78 +1,56 @@
 version: "3.1"
-
 stories:
-
-
-- story: user ask for his order - he gave order id first
+- story: list_sectors
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_order_status
+  - intent: ask_sectors
+  - action: action_list_sectors
+
+- story: list_semesters
+  steps:
+  - intent: ask_semesters
+  - action: action_list_semesters
+  - slot_was_set:
+      - sector: null  # Indicates the slot can be any sector provided by the user
+
+- story: list_modules
+  steps:
+  - intent: ask_modules
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null  # Indicates the slot can be any semester provided by the user
+
+- story: list_elements
+  steps:
+  - intent: ask_elements
     entities:
-      - order_id: "12345"
-  - action: action_check_order_status
-  - action: utter_order_follow_up
-
-
-- story: user ask for his order - i ask for order id he give
+      - module: null  # User can ask about any module dynamically
+  - action: action_list_elements
+  - slot_was_set:
+      - module: null
+      
+- story: ask about semesters and modules in different sectors
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_order_status
-  - action: utter_ask_for_order_id
-  - intent: ask_order_status
+  - intent: ask_semesters
     entities:
-      - order_id: "12345"
-  - action: action_check_order_status
-  - action: utter_order_follow_up
-
-
-
-
-
-- story: user ask for his order - he don't know order id, so he provide email
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_order_status
-  - action: utter_ask_for_order_id
-  - intent: deny
-  - action: utter_ask_for_email
-  - intent: provide_email
+      - sector: null  # The user can specify any sector dynamically
+  - action: action_list_semesters
+  - slot_was_set:
+      - sector: null
+  - intent: ask_modules
     entities:
-      - email: "user@domain.com"
-  - action: utter_email_provided
-  - action: action_check_email
-
-
-- story: user ask for his order - he doesn't know order ID or email, provides phone number
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_order_status
-  - action: utter_ask_for_order_id
-  - intent: deny
-  - action: utter_ask_for_email
-  - intent: deny
-  - action: utter_ask_for_phone
-  - intent: provide_phone
+      - semester: null  # The user can specify any semester dynamically
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null
+  - intent: ask_semesters
     entities:
-      - phone: "0699304036"
-  - action: utter_email_provided
-  - action: action_check_phone
-
-- story: user ask for his order - he don't know order id and he don't know email
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_order_status
-  - action: utter_ask_for_order_id
-  - intent: deny
-  - action: utter_ask_for_email
-  - intent: deny
-  - action: utter_ask_for_phone
-  - intent: deny
-  - action: utter_email_not_provided
-  - action: utter_goodbye
-
-
+      - sector: null
+  - action: action_list_semesters
+  - slot_was_set:
+      - sector: null
+  - intent: ask_modules
+    entities:
+      - semester: null
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null

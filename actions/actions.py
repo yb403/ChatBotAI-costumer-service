@@ -1,51 +1,180 @@
-from rasa_sdk import Action
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import mysql.connector
 from rasa_sdk.events import SlotSet
-import re
-class ActionCheckOrderStatus(Action):
-    def name(self) -> str:
-        return "action_check_order_status"
+class ActionListSectors(Action):
+    def name(self) -> Text:
+        return "action_list_sectors"
 
-    def run(self, dispatcher, tracker, domain):
-        order_id = tracker.get_slot('order_id')
-        if order_id:
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Connect to database
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = conn.cursor()
+        cursor.execute("SELECT name FROM Sector")
+        sectors = [row[0] for row in cursor.fetchall()]
+        cursor.close()
+        conn.close()
 
-            order_status = "Completed"  # Example response
-            dispatcher.utter_message(text=f"The status of your order with ID {order_id} is: {order_status}.")
-        else:
-            dispatcher.utter_message(text=f"Sorry, I couldn't find the order ID.")
+        dispatcher.utter_message(text=f"The available sectors are: {', '.join(sectors)}")
+        return []
+class ActionListSemesters(Action):
+    def name(self) -> Text:
+        return "action_list_semesters"
 
-
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        sector = tracker.get_slot("sector")
         
-        return []
-class ActionCheckEmail(Action):
-    def name(self) -> str:
-        return "action_check_email"
-
-    def run(self, dispatcher, tracker, domain):
-        email = tracker.get_slot('email')
-        email_pattern = r"[^@]+@[^@]+\.[^@]+"
+        if not sector:
+            dispatcher.utter_message(text="Please specify the sector.")
+            return []
         
+        # Connect to database
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = conn.cursor()
+        query = """
+        SELECT Semester.name 
+        FROM Semester
+        JOIN Sector ON Semester.sector_id = Sector.id
+        WHERE Sector.name = %s
+        """
+        cursor.execute(query, (sector,))
+        semesters = [row[0] for row in cursor.fetchall()]
+        cursor.close()
+        conn.close()
 
-        if email and re.match(email_pattern, email):
-            
-            
-            dispatcher.utter_message(text=f"The emai l {email} is valid.")
+        if semesters:
+            dispatcher.utter_message(text=f"The semesters in {sector} are: {', '.join(semesters)}.")
         else:
-            dispatcher.utter_message(text="Sorry, the provided email seems invalid. Please provide a valid email address.")
+            dispatcher.utter_message(text=f"No semesters found for the sector {sector}.")
+        
+        # Ensure sector is correctly set in the slot
+        return [SlotSet("sector", sector), SlotSet("semester", None)]
 
-        return []
-    
+class ActionListModules(Action):
+    def name(self) -> Text:
+        return "action_list_modules"
 
-class ActionCheckPhone(Action):
-    def name(self) -> str:
-        return "action_check_phone"
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        semester = tracker.get_slot("semester")
+        sector = tracker.get_slot("sector")
+        
+        if not semester:
+            dispatcher.utter_message(text="Please specify the semester.")
+            return []
+        
+        if not sector:
+            dispatcher.utter_message(text="Please specify the sector first.")
+            return []
+        
+        # Connect to database
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = conn.cursor()
+        query = """
+        SELECT Module.name 
+        FROM Module
+        JOIN Semester ON Module.semester_id = Semester.id
+        JOIN Sector ON Semester.sector_id = Sector.id
+        WHERE Semester.name = %s AND Sector.name = %s
+        """
+        cursor.execute(query, (semester, sector))
+        modules = [row[0] for row in cursor.fetchall()]
+        cursor.close()
+        conn.close()
 
-    def run(self, dispatcher, tracker, domain):
-        phone = tracker.get_slot('phone')
-        if phone:
-            dispatcher.utter_message(text=f"The phone {phone} is valid.")
+        if modules:
+            dispatcher.utter_message(text=f"The modules in {semester} for {sector} are: {', '.join(modules)}.")
         else:
-            dispatcher.utter_message(text="Sorry, the provided phone seems invalid. Please provide a valid email address.")
-
+            dispatcher.utter_message(text=f"No modules found for {semester} in {sector}.")
         return []
+
+
+class ActionListElements(Action):
+    def name(self) -> Text:
+        return "action_list_elements"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        module = tracker.get_slot("module")
+        
+        if not module:
+            dispatcher.utter_message(text="Please specify the module.")
+            return []
+
+        # Connect to the database
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = conn.cursor()
+        query = """
+        SELECT Element.name 
+        FROM Element
+        JOIN Module ON Element.module_id = Module.id
+        WHERE Module.name = %s
+        """
+        cursor.execute(query, (module,))
+        elements = [row[0] for row in cursor.fetchall()]
+        cursor.close()
+        conn.close()
+
+        if elements:
+            dispatcher.utter_message(text=f"The elements in {module} are: {', '.join(elements)}.")
+        else:
+            dispatcher.utter_message(text=f"No elements found for the module {module}.")
+        
+        return [SlotSet("module", module)]
+
+
+class ActionListTeacher(Action):
+    def name(self) -> Text:
+        return "action_list_teacher"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        element = tracker.get_slot("element")
+        
+        if not element:
+            dispatcher.utter_message(text="Please specify the element.")
+            return []
+        
+        # Connect to database
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = conn.cursor()
+        query = """
+        SELECT CONCAT(Teacher.fname, ' ', Teacher.lname) 
+        FROM Element
+        JOIN Teacher ON Element.prof_id = Teacher.id
+        WHERE Element.name = %s
+        """
+        cursor.execute(query, (element,))
