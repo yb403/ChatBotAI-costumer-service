@@ -4,8 +4,7 @@ intents:
   - ask_semesters
   - ask_modules
   - ask_elements
-  - ask_teacher
-
+  - ask_element_teacher
 
 entities:
   - sector
@@ -33,6 +32,7 @@ slots:
         entity: module
   element:
     type: text
+    influence_conversation: true
     mappings:
       - type: from_entity
         entity: element
@@ -59,4 +59,4 @@ actions:
   - action_list_semesters
   - action_list_modules
   - action_list_elements
-  - action_list_teacher
+  - action_list_element_teacher

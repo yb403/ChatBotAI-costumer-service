@@ -150,9 +150,9 @@ class ActionListElements(Action):
         return [SlotSet("module", module)]
 
 
-class ActionListTeacher(Action):
+class ActionListElementTeacher(Action):
     def name(self) -> Text:
-        return "action_list_teacher"
+        return "action_list_element_teacher"
 
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
@@ -162,8 +162,8 @@ class ActionListTeacher(Action):
         if not element:
             dispatcher.utter_message(text="Please specify the element.")
             return []
-        
-        # Connect to database
+
+        # Connect to the database
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
@@ -171,10 +171,22 @@ class ActionListTeacher(Action):
             database="chatbot"
         )
         cursor = conn.cursor()
+
         query = """
-        SELECT CONCAT(Teacher.fname, ' ', Teacher.lname) 
-        FROM Element
-        JOIN Teacher ON Element.prof_id = Teacher.id
-        WHERE Element.name = %s
+        SELECT Teacher.fname, Teacher.lname
+        FROM Teacher
+        JOIN Element ON Teacher.id = Element.prof_id
+        WHERE Element.name LIKE %s
         """
-        cursor.execute(query, (element,))
+        cursor.execute(query, (f"%{element}%",))
+        teacher = cursor.fetchone()
+        cursor.close()
+        conn.close()
+
+        if teacher:
+            fname, lname = teacher
+            dispatcher.utter_message(text=f"The teacher for {element} is {fname} {lname}.")
+        else:
+            dispatcher.utter_message(text=f"I couldn't find a teacher for the element {element}.")
+        
+        return [SlotSet("element", element)]

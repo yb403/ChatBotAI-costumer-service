@@ -37,7 +37,10 @@ nlu:
     - Tell me the elements in the module [Advanced Dynamics](module).
     - List the elements of the module [Material Science](module).
     - List the elements of the module [Fluid Mechanics](module).
-- intent: ask_teacher
+- intent: ask_element_teacher
   examples: |
-    - Who teaches [Data Structures](element)?
-    - Tell me the professor for [Algorithms](element).
+    - Who teaches [Variables and Data Types](element)?
+    - Which teacher is responsible for [Thermodynamics](element)?
+    - Tell me the teacher for [Fluid Dynamics](element).
+    - Who is the professor for the element [Advanced Dynamics](element)?
+    - Which teacher is responsible for [Python Basics](element)?

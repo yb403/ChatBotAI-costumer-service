@@ -81,3 +81,34 @@ stories:
   - action: action_list_elements
   - slot_was_set:
       - module: null
+
+
+- story: list_element_teacher
+  steps:
+  - intent: ask_modules
+    entities:
+      - semester: null
+  - action: action_list_modules
+  - slot_was_set:
+      - semester: null
+  - intent: ask_elements
+    entities:
+      - module: null
+  - action: action_list_elements
+  - slot_was_set:
+      - module: null
+  - intent: ask_element_teacher
+    entities:
+      - element: null
+  - action: action_list_element_teacher
+  - slot_was_set:
+      - element: null
+
+- story: list_element_teacher
+  steps:
+  - intent: ask_element_teacher
+    entities:
+      - element: null  # User can specify any element dynamically
+  - action: action_list_element_teacher
+  - slot_was_set:
+      - element: null
