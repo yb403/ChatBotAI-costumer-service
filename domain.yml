@@ -50,10 +50,10 @@ responses:
     - text: "Bye"
   utter_iamabot:
     - text: "yes im a bot"
-
-
   utter_greet:
     - text: "Hi there!"
+
+    
 actions:
   - action_list_sectors
   - action_list_semesters

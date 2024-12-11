@@ -27,8 +27,15 @@ nlu:
     - Show semesters in the [Computer Science](sector) sector.
 - intent: ask_modules
   examples: |
+    - What modules are in [Computer Science](sector)?
+    - Show me the modules in [Computer Science](sector).
     - What modules are in [Semester 1](semester)?
     - Show me the modules in [Semester 2](semester).
+    - What are all the modules in [Computer Science](sector)?
+    - List all modules for [Computer Science](sector).
+    - Tell me the modules for [Computer Science](sector).
+    - Can you list modules in [Computer Science](sector)?
+    
 - intent: ask_elements
   examples: |
     - What are the elements in [Introduction to Programming](module)?

@@ -74,39 +74,76 @@ class ActionListModules(Action):
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         semester = tracker.get_slot("semester")
         sector = tracker.get_slot("sector")
-        
-        if not semester:
-            dispatcher.utter_message(text="Please specify the semester.")
-            return []
-        
-        if not sector:
-            dispatcher.utter_message(text="Please specify the sector first.")
-            return []
-        
-        # Connect to database
-        conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="chatbot"
-        )
-        cursor = conn.cursor()
-        query = """
-        SELECT Module.name 
-        FROM Module
-        JOIN Semester ON Module.semester_id = Semester.id
-        JOIN Sector ON Semester.sector_id = Sector.id
-        WHERE Semester.name = %s AND Sector.name = %s
-        """
-        cursor.execute(query, (semester, sector))
-        modules = [row[0] for row in cursor.fetchall()]
-        cursor.close()
-        conn.close()
 
+        # Validate inputs
+        if not sector:
+            dispatcher.utter_message(text="Please specify the sector.")
+            return []
+
+        # Connect to the database
+        import mysql.connector
+
+        try:
+            conn = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="chatbot"
+            )
+            cursor = conn.cursor()
+
+            # If semester is provided, fetch specific modules for that semester in the sector
+            if semester:
+                query = """
+                SELECT Module.name 
+                FROM Module
+                JOIN Semester ON Module.semester_id = Semester.id
+                JOIN Sector ON Semester.sector_id = Sector.id
+                WHERE Semester.name = %s AND Sector.name = %s
+                """
+                cursor.execute(query, (semester, sector))
+            else:
+                # If semester is not provided, fetch all modules for the sector
+                query = """
+                SELECT DISTINCT Module.name 
+                FROM Module
+                JOIN Semester ON Module.semester_id = Semester.id
+                JOIN Sector ON Semester.sector_id = Sector.id
+                WHERE Sector.name = %s
+                """
+                cursor.execute(query, (sector,))
+
+            # Retrieve modules
+            modules = [row[0] for row in cursor.fetchall()]
+        except mysql.connector.Error as e:
+            dispatcher.utter_message(text=f"An error occurred while accessing the database: {str(e)}")
+            return []
+        finally:
+            if cursor:
+                cursor.close()
+            if conn:
+                conn.close()
+
+        # Respond to the user
         if modules:
-            dispatcher.utter_message(text=f"The modules in {semester} for {sector} are: {', '.join(modules)}.")
+            if semester:
+                dispatcher.utter_message(
+                    text=f"The modules in {semester} for {sector} are: {', '.join(modules)}."
+                )
+            else:
+                dispatcher.utter_message(
+                    text=f"The modules in {sector} are: {', '.join(modules)}."
+                )
         else:
-            dispatcher.utter_message(text=f"No modules found for {semester} in {sector}.")
+            if semester:
+                dispatcher.utter_message(
+                    text=f"No modules found for {semester} in {sector}."
+                )
+            else:
+                dispatcher.utter_message(
+                    text=f"No modules found in {sector}."
+                )
+
         return []
 
 

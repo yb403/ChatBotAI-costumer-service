@@ -12,6 +12,32 @@ stories:
   - slot_was_set:
       - sector: null  # Indicates the slot can be any sector provided by the user
 
+
+- story: ask_modules_with_sector
+  steps:
+  - intent: ask_modules
+    entities:
+      - sector: null  # User provides the sector but no semester
+  - action: action_list_modules
+  - slot_was_set:
+      - sector: null
+
+- story: ask_modules_with_sector_and_semester
+  steps:
+  - intent: ask_modules
+    entities:
+      - sector: null
+      - semester: null  # User provides both sector and semester
+  - action: action_list_modules
+  - slot_was_set:
+      - sector: null
+      - semester: null
+
+- story: ask_modules_without_sector
+  steps:
+  - intent: ask_modules
+  - action: action_list_modules
+  
 - story: list_modules
   steps:
   - intent: ask_modules
@@ -112,3 +138,7 @@ stories:
   - action: action_list_element_teacher
   - slot_was_set:
       - element: null
+
+
+
+
