@@ -8,31 +8,7 @@ assistant_id: 20241019-012950-interior-idea
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
 
-pipeline: 
-   - name: WhitespaceTokenizer
-   - name: RegexFeaturizer
-   - name: LexicalSyntacticFeaturizer
-   - name: CountVectorsFeaturizer
-   - name: CountVectorsFeaturizer
-     analyzer: char_wb
-     min_ngram: 1
-     max_ngram: 4
-   - name: DIETClassifier
-     epochs: 100
-     constrain_similarities: true
-   - name: EntitySynonymMapper
-   - name: ResponseSelector
-     epochs: 100
-     constrain_similarities: true
-   - name: FallbackClassifier
-     threshold: 0.3
-     ambiguity_threshold: 0.1
-
-# Configuration for Rasa Core.
-# https://rasa.com/docs/rasa/core/policies/
-policies: null
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
@@ -45,3 +21,68 @@ policies: null
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+
+language: fr
+
+pipeline:
+  # Spacy NLP model for French language processing
+  - name: SpacyNLP
+    model: "fr_core_news_md"
+  # Tokenizer for splitting text into tokens
+  - name: SpacyTokenizer
+  # Feature extractor to create features from tokens
+  - name: SpacyFeaturizer
+  # Extracts features based on regex patterns
+  - name: RegexFeaturizer
+  # Lexical and syntactic features for better understanding
+  - name: LexicalSyntacticFeaturizer
+  # Converts words into vectors (BOW model)
+  - name: CountVectorsFeaturizer
+  # The DIET Classifier for intent classification and entity extraction
+  - name: DIETClassifier
+    epochs: 100
+    random_seed: 42
+  # Entity Synonym Mapper to handle synonyms for entities
+  - name: EntitySynonymMapper
+  # Response Selector to improve selection of appropriate responses
+  - name: ResponseSelector
+    epochs: 100
+    random_seed: 42
+  # Fallback to catch low-confidence predictions
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+# Configuration for Rasa Core policies
+policies:
+  # RulePolicy for managing dialogue flows based on rules
+  - name: RulePolicy
+  # MemoizationPolicy for remembering previous interactions to improve prediction
+  - name: MemoizationPolicy
+  # TEDPolicy to manage more complex conversations and improve memory-based dialogue management
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    batch_size: 32
+    random_seed: 42
+  # Reinforcement learning policy for continuous improvement in complex conversations (optional)
+  - name: AugmentedMemoizationPolicy
+    max_history: 5
+
+# NLU configuration
+nlu:
+  # Use this configuration to train the NLU component
+  pipelines:
+    - name: SpacyNLP
+      model: "fr_core_news_md"
+    - name: SpacyTokenizer
+    - name: SpacyFeaturizer
+    - name: RegexFeaturizer
+    - name: DIETClassifier
+
+# Policies for the dialogue management
+core:
+  policies:
+    - name: MemoizationPolicy
+    - name: RulePolicy
+    - name: TEDPolicy

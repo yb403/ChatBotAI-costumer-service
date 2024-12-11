@@ -2,52 +2,54 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - salut
+    - bonjour
+    - coucou
+    - bonjour à vous
+    - bon matin
+    - bonsoir
+    - hé
+    - salut toi
+    - allons-y
+    - salut mec
+    - bonne matinée
+    - bonne soirée
+    - bon après-midi
+    - exit
 - intent: ask_sectors
   examples: |
-    - What sectors are available?
-    - Can you list all sectors?
+    - Quels secteurs sont disponibles ?
+    - Pouvez-vous lister tous les secteurs ?
 - intent: ask_semesters
   examples: |
-    - What semesters are in the [Management](sector)?
-    - What semesters are in the [Mechanical Engineering](sector)?
-    - What semesters are in the [Electrical Engineering](sector)?
-    - Show semesters in the [Computer Science](sector) sector.
+    - Quels semestres sont dans le secteur [Management](sector) ?
+    - Quels semestres sont dans le secteur [Génie Mécanique](sector) ?
+    - Quels semestres sont dans le secteur [Génie Informatique](sector) ?
+    - Quels semestres sont dans le secteur [Génie Électrique](sector) ?
+    - Affichez les semestres du secteur [Génie Informatique](sector).
 - intent: ask_modules
   examples: |
-    - What modules are in [Computer Science](sector)?
-    - Show me the modules in [Computer Science](sector).
-    - What modules are in [Semester 1](semester)?
-    - Show me the modules in [Semester 2](semester).
-    - What are all the modules in [Computer Science](sector)?
-    - List all modules for [Computer Science](sector).
-    - Tell me the modules for [Computer Science](sector).
-    - Can you list modules in [Computer Science](sector)?
-    
+    - Quels modules sont dans le secteur [Informatique](sector) ?
+    - Montrez-moi les modules du secteur [Informatique](sector).
+    - Quels modules sont dans le [Semestre 1](semester) ?
+    - Montrez-moi les modules du [Semestre 2](semester).
+    - Quels sont tous les modules du secteur [Informatique](sector) ?
+    - Listez tous les modules pour le secteur [Informatique](sector).
+    - Dites-moi les modules pour le secteur [Informatique](sector).
+    - Pouvez-vous lister les modules dans le secteur [Informatique](sector) ?
 - intent: ask_elements
   examples: |
-    - What are the elements in [Introduction to Programming](module)?
-    - What are the elements in [Fluid Mechanics](module)?
-    - Can you list the elements of [Thermodynamics](module)?
-    - Tell me the elements in the module [Advanced Dynamics](module).
-    - List the elements of the module [Material Science](module).
-    - List the elements of the module [Fluid Mechanics](module).
+    - Quels sont les éléments dans [Conception UML](module) ?
+    - Quels sont les éléments dans [Mécanique des Fluides](module) ?
+    - Pouvez-vous lister les éléments de [Programmation Orientée Objet](module) ?
+    - Dites-moi les éléments dans le module [Programmation Orientée Objet](module).
+    - Listez les éléments du module [Science des Matériaux](module).
+    - Listez les éléments du module [Mécanique des Fluides](module).
+    - Listez les éléments du module [Programmation Orientée Objet](module).
 - intent: ask_element_teacher
   examples: |
-    - Who teaches [Variables and Data Types](element)?
-    - Which teacher is responsible for [Thermodynamics](element)?
-    - Tell me the teacher for [Fluid Dynamics](element).
-    - Who is the professor for the element [Advanced Dynamics](element)?
-    - Which teacher is responsible for [Python Basics](element)?
+    - Qui enseigne [Variables et Types de Données](element) ?
+    - Quel professeur est responsable de [Thermodynamique](element) ?
+    - Dites-moi le professeur pour [Dynamique des Fluides](element).
+    - Qui est le professeur pour l'élément [Dynamique Avancée](element) ?
+    - Quel professeur est responsable de [Bases de Python](element) ?

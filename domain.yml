@@ -1,62 +1,62 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - ask_sectors
-  - ask_semesters
-  - ask_modules
-  - ask_elements
-  - ask_element_teacher
-
+- ask_element_teacher
+- ask_elements
+- ask_modules
+- ask_sectors
+- ask_semesters
+- greet
 entities:
-  - sector
-  - semester
-  - module
-  - element
-
+- sector
+- semester
+- module
+- element
 slots:
   sector:
     type: text
     influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: sector
+    - type: from_entity
+      entity: sector
   semester:
     type: text
     influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: semester
+    - type: from_entity
+      entity: semester
   module:
     type: text
     mappings:
-      - type: from_entity
-        entity: module
+    - type: from_entity
+      entity: module
   element:
     type: text
     influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: element
-
+    - type: from_entity
+      entity: element
 responses:
   utter_list_sectors:
-    - text: "The available sectors are: {sectors}"
+  - text: 'Les secteurs disponibles sont : {sectors}'
   utter_list_semesters:
-    - text: "The semesters in {sector} are: {semesters}"
+  - text: 'Les semestres dans {sector} sont : {semesters}'
   utter_list_modules:
-    - text: "The modules in {semester} are: {modules}"
+  - text: 'Les modules dans {semester} sont : {modules}'
   utter_list_teacher:
-    - text: "The professor for {element} is {teacher}."
+  - text: Le professeur pour {element} est {teacher}.
   utter_goodbye:
-    - text: "Bye"
+  - text: Au revoir
   utter_iamabot:
-    - text: "yes im a bot"
+  - text: Oui, je suis un bot.
   utter_greet:
-    - text: "Hi there!"
-
-    
+  - text: Bonjour !
 actions:
-  - action_list_sectors
-  - action_list_semesters
-  - action_list_modules
-  - action_list_elements
-  - action_list_element_teacher
+- action_list_element_teacher
+- action_list_elements
+- action_list_modules
+- action_list_sectors
+- action_list_semesters
+- utter_greet
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
