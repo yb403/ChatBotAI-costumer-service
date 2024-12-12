@@ -7,10 +7,10 @@ intents:
 - ask_semesters
 - greet
 entities:
-- sector
-- semester
 - module
+- sector
 - element
+- semester
 slots:
   sector:
     type: text
@@ -37,9 +37,9 @@ slots:
       entity: element
 responses:
   utter_list_sectors:
-  - text: 'Les secteurs disponibles sont : {sectors}'
+  - text: 'Les filières disponibles sont : {sectors}'
   utter_list_semesters:
-  - text: 'Les semestres dans {sector} sont : {semesters}'
+  - text: 'Les Semesters dans {sector} sont : {semesters}'
   utter_list_modules:
   - text: 'Les modules dans {semester} sont : {modules}'
   utter_list_teacher:

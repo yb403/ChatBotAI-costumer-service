@@ -144,3 +144,36 @@ stories:
 
 
 
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_modules
+    entities:
+    - sector: Génie Informatique
+  - slot_was_set:
+    - sector: Génie Informatique
+  - action: action_list_modules
+  - intent: ask_elements
+    entities:
+    - module: Programmation Orientée Objet
+  - slot_was_set:
+    - module: Programmation Orientée Objet
+  - action: action_list_elements
+  - slot_was_set:
+    - module: Programmation Orientée Objet
+  - intent: ask_elements
+    entities:
+    - element: Oracle
+  - slot_was_set:
+    - element: Oracle
+  - action: action_list_element_teacher
+  - slot_was_set:
+    - element: Oracle
+  - intent: ask_elements
+    entities:
+    - module: Bases De Données
+  - action: action_list_elements
+  - slot_was_set:
+    - module: Programmation Orientée Objet

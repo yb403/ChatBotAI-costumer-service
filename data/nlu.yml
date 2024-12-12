@@ -16,36 +16,72 @@ nlu:
     - bonne soirée
     - bon après-midi
     - exit
+    - hello
+    - hi
+    - hey
+
 - intent: ask_sectors
   examples: |
-    - Quels secteurs sont disponibles ?
-    - Pouvez-vous lister tous les secteurs ?
+    - Quels filières sont disponibles ?
+    - Pouvez-vous lister tous les filières ?
+    - Listez les filières.
+    - Quelles sont les différentes filières disponibles ?
+    - Quelles sont les options d'étude ?
+    - Je veux connaître les filières disponibles.
+
 - intent: ask_semesters
   examples: |
-    - Quels semestres sont dans le secteur [Management](sector) ?
-    - Quels semestres sont dans le secteur [Génie Mécanique](sector) ?
-    - Quels semestres sont dans le secteur [Génie Informatique](sector) ?
-    - Quels semestres sont dans le secteur [Génie Électrique](sector) ?
-    - Affichez les semestres du secteur [Génie Informatique](sector).
+    - Quels Semesters sont dans le filière [Génie Informatique](sector) ?
+    - Quels Semesters sont dans le filière [Génie Mécanique](sector) ?
+    - Quels Semesters sont dans le filière [Génie Électrique](sector) ?
+    - Quels Semesters sont dans le filière [Génie Civil](sector) ?
+    - Montrez les Semesters du filière [Génie Chimique](sector).
+    - Pouvez-vous lister les Semesters pour le filière [Génie Informatique](sector) ?
+    - Dites-moi les Semesters dans le filière [Génie Informatique](sector).
+    - Listez les Semesters disponibles dans [Génie Mécanique](sector).
+    - Quelles périodes d'étude sont disponibles dans [Génie Électrique](sector) ?
+    - Quels sont les Semesters offerts en [Génie Informatique](sector) ?
+    - Pouvez-vous donner les Semesters de [Génie Informatique](sector) ?
+    - Affichez les Semesters pour [Génie Civil](sector).
+
+
 - intent: ask_modules
   examples: |
-    - Quels modules sont dans le secteur [Informatique](sector) ?
-    - Montrez-moi les modules du secteur [Informatique](sector).
-    - Quels modules sont dans le [Semestre 1](semester) ?
-    - Montrez-moi les modules du [Semestre 2](semester).
-    - Quels sont tous les modules du secteur [Informatique](sector) ?
-    - Listez tous les modules pour le secteur [Informatique](sector).
-    - Dites-moi les modules pour le secteur [Informatique](sector).
-    - Pouvez-vous lister les modules dans le secteur [Informatique](sector) ?
+    - Quels modules sont dans le filière [Génie Informatique](sector) ?
+    - Montrez-moi les modules du filière [Génie Informatique](sector).
+    - Quels Semesters sont dans [GI](sector) ?
+    - Montrez les Semesters pour [GM](sector).
+    - Pouvez-vous donner les Semesters pour [GE](sector) ?
+    - Affichez les Semesters pour le filière [GC](sector).
+    - Quels modules sont dans le [Semester 1](semester) ?
+    - Montrez-moi les modules du [Semester 2](semester).
+    - Quels sont tous les modules du filière [Génie Informatique](sector) ?
+    - Listez tous les modules pour le filière [Génie Informatique](sector).
+    - Dites-moi les modules pour le filière [Génie Informatique](sector).
+    - Pouvez-vous lister les modules dans le filière [Génie Informatique](sector) ?
+    - Quels modules sont dans le filière [Génie Informatique](sector) ?
+    - Quelles matières sont enseignées dans [Génie Informatique](sector) ?
+    - Quels cours sont disponibles dans le [Semester 1](semester) de [Génie Informatique](sector) ?
+    - Listez les modules en [Génie Mécanique](sector).
+    - Quels sont les cours en [Génie Électrique](sector) dans le [Semester 2](semester) ?
+
 - intent: ask_elements
   examples: |
     - Quels sont les éléments dans [Conception UML](module) ?
+    - Quels sont les éléments dans [Mathématiques 1](module) ?
     - Quels sont les éléments dans [Mécanique des Fluides](module) ?
     - Pouvez-vous lister les éléments de [Programmation Orientée Objet](module) ?
     - Dites-moi les éléments dans le module [Programmation Orientée Objet](module).
     - Listez les éléments du module [Science des Matériaux](module).
     - Listez les éléments du module [Mécanique des Fluides](module).
     - Listez les éléments du module [Programmation Orientée Objet](module).
+    - Pouvez-vous lister les éléments de [Programmation Orientée Objet](module)?
+    - Pouvez-vous lister les éléments de [Bases De Données](module)?
+    - Quelles sont les parties couvertes dans [Théorie des Graphes](module) ?
+    - Quels sont les sujets étudiés dans [Systèmes d’Exploitation](module) ?
+    - Qu’est-ce qui est inclus dans [Électronique Analogique](module) ?
+    - Listez tous les contenus de [Structures Algébriques](module).
+    - Dites-moi les composants du module [Cryptographie et Sécurité](module).
 - intent: ask_element_teacher
   examples: |
     - Qui enseigne [Variables et Types de Données](element) ?
@@ -53,3 +89,70 @@ nlu:
     - Dites-moi le professeur pour [Dynamique des Fluides](element).
     - Qui est le professeur pour l'élément [Dynamique Avancée](element) ?
     - Quel professeur est responsable de [Bases de Python](element) ?
+- lookup: module
+  examples: |
+    - Oracle
+    - Conception UML
+    - Mathématiques 1
+    - Mathématiques 2
+    - Programmation Orientée Objet Java
+    - Langues Et Organisation D'entreprise
+    - Base De Données Avancées Oracle
+    - Programmation Python
+    - Intelligence Artificielle
+    - Gestion des Projets
+    - Algorithmes et Structures de Données
+    - Analyse des Données
+    - Calcul Numérique
+    - Réseaux Informatiques
+    - Conception de Circuits Numériques
+    - Programmation Web Avancée
+    - Machine Learning
+    - Simulation et Modélisation
+    - Systèmes d'Information Géographique
+    - Développement d'Applications Mobiles
+    - Analyse et Conception Orientée Objet
+    - Sécurité Informatique
+    - Big Data
+    - Deep Learning
+
+
+- lookup: sector
+  examples: |
+    - Génie Informatique
+    - Génie Mécanique
+    - Génie Électrique
+    - Génie Civil
+    - Génie Chimique
+    - Génie Industriel
+    - Génie Environnemental
+    - Génie Biomédical
+    - Génie Énergétique
+    - GI
+    - GM
+    - GE
+    - GC
+- synonym: Génie Informatique
+  examples: |
+    - GI
+    - Informatique
+    - Génie Info
+    - Génie d'Informatique
+
+- synonym: Génie Mécanique
+  examples: |
+    - GM
+    - Mécanique
+    - Génie de Mécanique
+
+- synonym: Génie Électrique
+  examples: |
+    - GE
+    - Électrique
+    - Génie d'Électrique
+
+- synonym: Génie Civil
+  examples: |
+    - GC
+    - Civil
+    - Génie de Civil

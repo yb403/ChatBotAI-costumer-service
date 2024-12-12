@@ -24,7 +24,8 @@ class ActionListSectors(Action):
         conn.close()
 
         #dispatcher.utter_message(text=f"The available sectors are: {', '.join(sectors)}")
-        dispatcher.utter_message(text=f"Les secteurs disponibles sont : {', '.join(sectors)}")
+        #dispatcher.utter_message(text=f"Les filières disponibles sont : {', '.join(sectors)}")
+        dispatcher.utter_message(text=f"Les filières disponibles sont :  \n-" + "\n-".join(sectors) + ".")
 
         return []
 class ActionListSemesters(Action):
@@ -63,10 +64,11 @@ class ActionListSemesters(Action):
 
         if semesters:
             #dispatcher.utter_message(text=f"The semesters in {sector} are: {', '.join(semesters)}.")
-            dispatcher.utter_message(text=f"Les semestres dans {sector} sont : {', '.join(semesters)}.")
+            #dispatcher.utter_message(text=f"Les Semesters dans {sector} sont : {', '.join(semesters)}.")
+            dispatcher.utter_message(text=f"Les Semesters dans {sector} sont :  \n-" + "\n-".join(semesters) + ".")
         else:
             #dispatcher.utter_message(text=f"No semesters found for the sector {sector}.")
-            dispatcher.utter_message(text=f"Aucun semestre trouvé pour le secteur {sector}.")
+            dispatcher.utter_message(text=f"Aucun Semester trouvé pour le filière {sector}.")
         # Ensure sector is correctly set in the slot
         return [SlotSet("sector", sector), SlotSet("semester", None)]
 
@@ -135,13 +137,12 @@ class ActionListModules(Action):
             if semester:
                 #dispatcher.utter_message(text=f"The modules in {semester} for {sector} are: {', '.join(modules)}.")
                 #dispatcher.utter_message(text=f"Les modules dans {semester} pour {sector} sont : {r'\n-'.join(modules)}.")
-                dispatcher.utter_message(text=f"Les modules dans {semester} pour {sector} sont : \n-{'-'.join(modules)}.")
-
+                dispatcher.utter_message(text=f"Les modules dans {semester} pour {sector} sont:  \n-" + "\n-".join(modules) + ".")
 
             else:
                 #dispatcher.utter_message(text=f"The modules in {sector} are: {', '.join(modules)}.")
                 #dispatcher.utter_message(text=f"Les modules dans {sector} sont : {', '.join(modules)}.")
-                dispatcher.utter_message(text=f"Les modules dans {sector} sont :  \n- " + "\n-".join(modules) + ".")
+                dispatcher.utter_message(text=f"Les modules dans {sector} sont :  \n-" + "\n-".join(modules) + ".")
 
 
 
@@ -177,20 +178,21 @@ class ActionListElements(Action):
             database="chatbot"
         )
         cursor = conn.cursor()
+
         query = """
         SELECT Element.name 
         FROM Element
         JOIN Module ON Element.module_id = Module.id
-        WHERE Module.name = %s
+        WHERE Module.name LIKE %s
         """
-        cursor.execute(query, (module,))
+        cursor.execute(query, (f"%{module}%",))
         elements = [row[0] for row in cursor.fetchall()]
         cursor.close()
         conn.close()
 
         if elements:
             #dispatcher.utter_message(text=f"The elements in {module} are: {', '.join(elements)}.")
-            dispatcher.utter_message(text=f"Les éléments dans {module} sont : {', '.join(elements)}.")
+            dispatcher.utter_message(text=f"Les éléments dans {module} sont :  \n-" + "\n-".join(elements) + ".")
 
         else:
             #dispatcher.utter_message(text=f"No elements found for the module {module}.")
