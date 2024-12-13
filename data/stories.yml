@@ -177,3 +177,10 @@ stories:
   - action: action_list_elements
   - slot_was_set:
     - module: Programmation Orientée Objet
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_element_teacher
+    entities:
+    - element: Analyse 1
+  - action: action_list_element_teacher

@@ -19,7 +19,6 @@ nlu:
     - hello
     - hi
     - hey
-
 - intent: ask_sectors
   examples: |
     - Quels filières sont disponibles ?
@@ -28,7 +27,6 @@ nlu:
     - Quelles sont les différentes filières disponibles ?
     - Quelles sont les options d'étude ?
     - Je veux connaître les filières disponibles.
-
 - intent: ask_semesters
   examples: |
     - Quels Semesters sont dans le filière [Génie Informatique](sector) ?
@@ -41,8 +39,6 @@ nlu:
     - Quels sont les Semesters offerts en [Génie Informatique](sector) ?
     - Pouvez-vous donner les Semesters de [Génie Informatique](sector) ?
     - Affichez les Semesters pour [Techniques de Management](sector).
-
-
 - intent: ask_modules
   examples: |
     - Quels modules sont dans le filière [Génie Informatique](sector) ?
@@ -57,12 +53,10 @@ nlu:
     - Listez tous les modules pour le filière [Génie Informatique](sector).
     - Dites-moi les modules pour le filière [Génie Informatique](sector).
     - Pouvez-vous lister les modules dans le filière [Génie Informatique](sector) ?
-    - Quels modules sont dans le filière [Génie Informatique](sector) ?
     - Quelles matières sont enseignées dans [Génie Informatique](sector) ?
     - Quels cours sont disponibles dans le [Semester 1](semester) de [Génie Informatique](sector) ?
     - Listez les modules en [Génie Agroenvironnement](sector).
     - Quels sont les cours en [Techniques de Management](sector) dans le [Semester 2](semester) ?
-
 - intent: ask_elements
   examples: |
     - Quels sont les éléments dans [Conception UML](module) ?
@@ -87,6 +81,24 @@ nlu:
     - Dites-moi le professeur pour [Dynamique des Fluides](element).
     - Qui est le professeur pour l'élément [Dynamique Avancée](element) ?
     - Quel professeur est responsable de [Bases de Python](element) ?
+    - Qui est le professeur pour l'élément [Analyse 1](element)?
+- synonym: Génie Informatique
+  examples: |
+    - GI
+    - Informatique
+    - Génie Info
+    - Génie d'Informatique
+- synonym: Génie Agroenvironnement
+  examples: |
+    - GA
+    - Agro
+    - Agroenvironnement
+    - Génie de Agroenvironnement
+- synonym: Techniques de Management
+  examples: |
+    - TM
+    - Techniques
+    - Management
 - lookup: module
   examples: |
     - Oracle
@@ -113,8 +125,6 @@ nlu:
     - Sécurité Informatique
     - Big Data
     - Deep Learning
-
-
 - lookup: sector
   examples: |
     - Génie Informatique
@@ -123,22 +133,3 @@ nlu:
     - GI
     - GA
     - TM
-- synonym: Génie Informatique
-  examples: |
-    - GI
-    - Informatique
-    - Génie Info
-    - Génie d'Informatique
-
-- synonym: Génie Agroenvironnement
-  examples: |
-    - GA
-    - Agro
-    - Agroenvironnement
-    - Génie de Agroenvironnement
-
-- synonym: Techniques de Management
-  examples: |
-    - TM
-    - Techniques
-    - Management
