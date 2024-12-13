@@ -151,36 +151,59 @@ stories:
   - action: utter_greet
   - intent: ask_modules
     entities:
-    - sector: Génie Informatique
+    - sector: null
   - slot_was_set:
-    - sector: Génie Informatique
+    - sector: null
   - action: action_list_modules
   - intent: ask_elements
     entities:
-    - module: Programmation Orientée Objet
+    - module: null
   - slot_was_set:
-    - module: Programmation Orientée Objet
+    - module: null
   - action: action_list_elements
   - slot_was_set:
-    - module: Programmation Orientée Objet
+    - module: null
   - intent: ask_elements
     entities:
-    - element: Oracle
+    - element: null
   - slot_was_set:
-    - element: Oracle
+    - element: null
   - action: action_list_element_teacher
   - slot_was_set:
-    - element: Oracle
+    - element: null
   - intent: ask_elements
     entities:
     - module: Bases De Données
   - action: action_list_elements
   - slot_was_set:
-    - module: Programmation Orientée Objet
+    - module: null
 
 - story: interactive_story_1
   steps:
   - intent: ask_element_teacher
     entities:
-    - element: Analyse 1
+    - element: null
   - action: action_list_element_teacher
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_element_teacher
+    entities:
+    - element: null
+  - slot_was_set:
+    - element: null
+  - action: action_list_element_teacher
+  - slot_was_set:
+    - element: null
+  - intent: ask_element_teacher
+    entities:
+    - element: null
+  - action: action_list_element_teacher
+  - slot_was_set:
+    - element: null
+  - intent: ask_element_teacher
+    entities:
+    - element: null
+  - action: action_list_element_teacher
+  - slot_was_set:
+    - element: null

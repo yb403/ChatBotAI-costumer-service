@@ -82,6 +82,8 @@ nlu:
     - Qui est le professeur pour l'élément [Dynamique Avancée](element) ?
     - Quel professeur est responsable de [Bases de Python](element) ?
     - Qui est le professeur pour l'élément [Analyse 1](element)?
+    - Qui est le professeur pour l'élément [Analyse 2](element)?
+    - Qui est le professeur pour l'élément [Algorithmique](element) ?
 - synonym: Génie Informatique
   examples: |
     - GI
