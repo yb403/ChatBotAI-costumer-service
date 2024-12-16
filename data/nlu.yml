@@ -35,10 +35,14 @@ nlu:
     - Montrez les Semesters du filière [Génie Informatique](sector).
     - Pouvez-vous lister les Semesters pour le filière [Génie Informatique](sector) ?
     - Dites-moi les Semesters dans le filière [Génie Informatique](sector).
+    Dites-moi les Semesters dans le filière [GI](sector).
     - Listez les Semesters disponibles dans [Génie Agroenvironnement](sector).
     - Quels sont les Semesters offerts en [Génie Informatique](sector) ?
     - Pouvez-vous donner les Semesters de [Génie Informatique](sector) ?
     - Affichez les Semesters pour [Techniques de Management](sector).
+    - Quels semesters sont dans le filière [GI](sector) ?
+    - Quels semesters sont dans le filière [GA](sector) ?
+    - Quels semesters sont dans le filière [TM](sector) ?
 - intent: ask_modules
   examples: |
     - Quels modules sont dans le filière [Génie Informatique](sector) ?
@@ -49,6 +53,8 @@ nlu:
     - Affichez les Semesters pour le filière [TM](sector).
     - Quels modules sont dans le [Semester 1](semester) ?
     - Montrez-moi les modules du [Semester 2](semester).
+    - Quels modules sont dans le [S1](semester) ?
+    - Montrez-moi les modules du [S3](semester).
     - Quels sont tous les modules du filière [Génie Informatique](sector) ?
     - Listez tous les modules pour le filière [Génie Informatique](sector).
     - Dites-moi les modules pour le filière [Génie Informatique](sector).
@@ -56,7 +62,9 @@ nlu:
     - Quelles matières sont enseignées dans [Génie Informatique](sector) ?
     - Quels cours sont disponibles dans le [Semester 1](semester) de [Génie Informatique](sector) ?
     - Listez les modules en [Génie Agroenvironnement](sector).
+    - Quels cours sont disponibles dans le [S1](semester) de [Génie Informatique](sector) ?
     - Quels sont les cours en [Techniques de Management](sector) dans le [Semester 2](semester) ?
+    - Quels sont les cours en [Génie Informatique](sector) dans le [S2](semester) ?
 - intent: ask_elements
   examples: |
     - Quels sont les éléments dans [Conception UML](module) ?
@@ -84,6 +92,36 @@ nlu:
     - Qui est le professeur pour l'élément [Analyse 1](element)?
     - Qui est le professeur pour l'élément [Analyse 2](element)?
     - Qui est le professeur pour l'élément [Algorithmique](element) ?
+
+
+
+- regex: Semester
+  examples: |
+    - S[1-6]
+- synonym: Semester 1
+  examples: |
+    - S1
+    - Semestre 1
+    - Semester1
+
+- synonym: Semester 2
+  examples: |
+    - S2
+    - Semestre 2
+    - Semester2
+
+- synonym: Semester 3
+  examples: |
+    - S3
+    - Semestre 3
+    - Semester3
+
+- synonym: Semester 4
+  examples: |
+    - S4
+    - Semestre 4
+    - Semester4
+
 - synonym: Génie Informatique
   examples: |
     - GI

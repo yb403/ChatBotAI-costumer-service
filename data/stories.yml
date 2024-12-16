@@ -207,3 +207,10 @@ stories:
   - action: action_list_element_teacher
   - slot_was_set:
     - element: null
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_semesters
+    entities:
+    - sector: null
+  - action: action_list_semesters
