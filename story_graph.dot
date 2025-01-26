@@ -2,12 +2,18 @@ digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
-2 [class=active, fontsize=12, label=action_list_elements];
-3 [class="intent dashed active", label="  ?  ", shape=rect];
-4 [class="intent active", fillcolor=lightblue, label="/ask_elements", shape=rect, style=filled];
+2 [class=active, fontsize=12, label=action_default_fallback];
+17 [class=active, fontsize=12, label=action_session_start];
+18 [class=active, fontsize=12, label=utter_goodbye];
+19 [class="intent dashed active", label="  ?  ", shape=rect];
+20 [class="intent active", fillcolor=lightblue, label="/g", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
-1 -> 4  [class=active, key=0];
-2 -> 3  [class=active, key=NONE, label=""];
-4 -> 2  [class=active, key=0];
+1 -> 2  [class=active, key=NONE, label=""];
+1 -> 20  [class=active, key=0];
+2 -> 1  [class=active, key=NONE, label=""];
+2 -> 17  [class=active, key=NONE, label=""];
+17 -> 18  [class=active, key=NONE, label=""];
+18 -> 19  [class=active, key=NONE, label=""];
+20 -> 2  [class=active, key=0];
 }

@@ -19,6 +19,7 @@ nlu:
     - hello
     - hi
     - hey
+
 - intent: ask_sectors
   examples: |
     - Quels filières sont disponibles ?
