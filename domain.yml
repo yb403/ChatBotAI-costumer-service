@@ -7,9 +7,9 @@ intents:
 - ask_semesters
 - greet
 entities:
+- module
 - sector
 - element
-- module
 - semester
 slots:
   sector:

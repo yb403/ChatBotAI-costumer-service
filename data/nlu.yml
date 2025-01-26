@@ -35,7 +35,6 @@ nlu:
     - Montrez les Semesters du filière [Génie Informatique](sector).
     - Pouvez-vous lister les Semesters pour le filière [Génie Informatique](sector) ?
     - Dites-moi les Semesters dans le filière [Génie Informatique](sector).
-    Dites-moi les Semesters dans le filière [GI](sector).
     - Listez les Semesters disponibles dans [Génie Agroenvironnement](sector).
     - Quels sont les Semesters offerts en [Génie Informatique](sector) ?
     - Pouvez-vous donner les Semesters de [Génie Informatique](sector) ?
@@ -82,6 +81,7 @@ nlu:
     - Qu’est-ce qui est inclus dans [Électronique Analogique](module) ?
     - Listez tous les contenus de [Structures Algébriques](module).
     - Dites-moi les composants du module [Cryptographie et Sécurité](module).
+    - Pouvez-vous lister les éléments de [Oracle](module) ?
 - intent: ask_element_teacher
   examples: |
     - Qui enseigne [Variables et Types de Données](element) ?
@@ -92,36 +92,26 @@ nlu:
     - Qui est le professeur pour l'élément [Analyse 1](element)?
     - Qui est le professeur pour l'élément [Analyse 2](element)?
     - Qui est le professeur pour l'élément [Algorithmique](element) ?
-
-
-
-- regex: Semester
-  examples: |
-    - S[1-6]
 - synonym: Semester 1
   examples: |
     - S1
     - Semestre 1
     - Semester1
-
 - synonym: Semester 2
   examples: |
     - S2
     - Semestre 2
     - Semester2
-
 - synonym: Semester 3
   examples: |
     - S3
     - Semestre 3
     - Semester3
-
 - synonym: Semester 4
   examples: |
     - S4
     - Semestre 4
     - Semester4
-
 - synonym: Génie Informatique
   examples: |
     - GI
@@ -139,6 +129,9 @@ nlu:
     - TM
     - Techniques
     - Management
+- regex: Semester
+  examples: |
+    - S[1-6]
 - lookup: module
   examples: |
     - Oracle

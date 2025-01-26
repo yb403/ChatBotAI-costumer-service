@@ -214,3 +214,10 @@ stories:
     entities:
     - sector: null
   - action: action_list_semesters
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_elements
+    entities:
+    - module: Oracle
+  - action: action_list_elements
