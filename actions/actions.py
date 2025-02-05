@@ -230,6 +230,7 @@ class ActionListElementTeacher(Action):
         JOIN Element ON Teacher.id = Element.prof_id
         WHERE Element.name LIKE %s
         """
+
         cursor.execute(query, (f"%{element}%",))
         teacher = cursor.fetchone()
         cursor.close()
@@ -244,3 +245,14 @@ class ActionListElementTeacher(Action):
             #dispatcher.utter_message(text=f"I couldn't find a teacher for the element {element}.")
             dispatcher.utter_message(text=f"Je n'ai pas trouvé de professeur pour l'élément {element}.")
         return [SlotSet("element", element)]
+
+
+
+class ActionDefaultFallback(Action):
+    def name(self) -> str:
+        return "action_default_fallback"
+
+    async def run(self, dispatcher, tracker, domain):
+        # Cette partie peut être modifiée selon ce que vous voulez que l'action fasse
+        dispatcher.utter_message(text="Désolé, je n'ai pas bien compris. Pouvez-vous reformuler ?")
+        return []

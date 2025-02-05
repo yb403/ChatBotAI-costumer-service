@@ -1,5 +1,6 @@
 version: "3.1"
 
+
 rules:
 
 - rule: Say goodbye anytime the user says goodbye
@@ -14,3 +15,7 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+- rule: Action de fallback
+  steps:
+    - intent: nlu_fallback
+    - action: action_default_fallback

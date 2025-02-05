@@ -49,3 +49,5 @@ action_server_log/
 
 # Hidden files that might get created by system or IDE
 *~
+cache_camembert/
+custom/

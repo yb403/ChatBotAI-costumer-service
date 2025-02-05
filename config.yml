@@ -22,36 +22,28 @@ assistant_id: 20241019-012950-interior-idea
 #     epochs: 100
 #     constrain_similarities: true
 
-language: fr
+language: fr  # Set language to French
 
 pipeline:
-  # Spacy NLP model for French language processing
-  - name: SpacyNLP
-    model: "fr_core_news_md"
-  # Tokenizer for splitting text into tokens
-  - name: SpacyTokenizer
-  # Feature extractor to create features from tokens
-  - name: SpacyFeaturizer
-  # Extracts features based on regex patterns
+  - name: WhitespaceTokenizer
   - name: RegexFeaturizer
-  # Lexical and syntactic features for better understanding
   - name: LexicalSyntacticFeaturizer
-  # Converts words into vectors (BOW model)
   - name: CountVectorsFeaturizer
-  # The DIET Classifier for intent classification and entity extraction
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: LanguageModelFeaturizer
+    model_name: "camembert"  # Use CamemBERT model
+    model_weights: "camembert-base"
   - name: DIETClassifier
     epochs: 100
-    random_seed: 42
-  # Entity Synonym Mapper to handle synonyms for entities
   - name: EntitySynonymMapper
-  # Response Selector to improve selection of appropriate responses
   - name: ResponseSelector
     epochs: 100
-    random_seed: 42
-  # Fallback to catch low-confidence predictions
   - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
+
+
 
 # Configuration for Rasa Core policies
 policies:
@@ -70,15 +62,16 @@ policies:
     max_history: 5
 
 # NLU configuration
-nlu:
-  # Use this configuration to train the NLU component
-  pipelines:
-    - name: SpacyNLP
-      model: "fr_core_news_md"
-    - name: SpacyTokenizer
-    - name: SpacyFeaturizer
-    - name: RegexFeaturizer
-    - name: DIETClassifier
+#nlu:
+#  # Use this configuration to train the NLU component
+#  pipelines:
+#    - name: SpacyNLP
+#      model: "fr_core_news_md"
+#    - name: SpacyTokenizer
+#    - name: SpacyFeaturizer
+#    - name: RegexFeaturizer
+#    - name: DIETClassifier
+#rasa run --enable-api --cors "*"
 
 # Policies for the dialogue management
 core:
