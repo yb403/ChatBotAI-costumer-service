@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -20,7 +19,6 @@ nlu:
     - hello
     - hi
     - hey
-
 - intent: ask_sectors
   examples: |
     - Quels filières sont disponibles ?
@@ -94,6 +92,7 @@ nlu:
     - Qui est le professeur pour l'élément [Analyse 1](element)?
     - Qui est le professeur pour l'élément [Analyse 2](element)?
     - Qui est le professeur pour l'élément [Algorithmique](element) ?
+    - Quel professeur est responsable de [Web 2](element) ?
 - synonym: Semester 1
   examples: |
     - S1
@@ -168,4 +167,3 @@ nlu:
     - GI
     - GA
     - TM
-#Programmation Orientée Objet Java

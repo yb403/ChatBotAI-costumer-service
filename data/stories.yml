@@ -222,3 +222,11 @@ stories:
     entities:
     - module: Oracle
   - action: action_list_elements
+
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_element_teacher
+    entities:
+    - element: Web 2
+  - action: action_list_element_teacher
