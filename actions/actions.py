@@ -166,11 +166,16 @@ class ActionListElements(Action):
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         module = tracker.get_slot("module")
         
+        sector = None
         if not module:
-            dispatcher.utter_message(text="Please specify the module.")
-            return []
+            module = tracker.get_slot("element")
+            if not module:
+                sector = tracker.get_slot("sector")
+                if not sector:
+                        dispatcher.utter_message(text="Please specify the module.")
+                        return []
 
-        # Connect to the database
+        
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
@@ -178,27 +183,37 @@ class ActionListElements(Action):
             database="chatbot"
         )
         cursor = conn.cursor()
-
-        query = """
-        SELECT Element.name 
-        FROM Element
-        JOIN Module ON Element.module_id = Module.id
-        WHERE Module.name LIKE %s
-        """
-        cursor.execute(query, (f"%{module}%",))
+        if sector != None:
+            query = """
+                SELECT Element.name
+                FROM Element
+                LEFT JOIN Module ON Element.module_id = Module.id AND Module.name LIKE %s
+            """
+            cursor.execute(query, (f"%{sector}%",))
+        else:
+            query = """
+            SELECT Element.name 
+            FROM Element
+            JOIN Module ON Element.module_id = Module.id
+            WHERE Module.name LIKE %s
+            """
+            cursor.execute(query, (f"%{module}%",))
         elements = [row[0] for row in cursor.fetchall()]
         cursor.close()
         conn.close()
-
+        if not module:
+            module = sector
         if elements:
             #dispatcher.utter_message(text=f"The elements in {module} are: {', '.join(elements)}.")
+            
             dispatcher.utter_message(text=f"Les éléments dans {module} sont :  \n-" + "\n-".join(elements) + ".")
 
         else:
             #dispatcher.utter_message(text=f"No elements found for the module {module}.")
             dispatcher.utter_message(text=f"Aucun élément trouvé pour le module {module}.")
 
-        
+        if sector != None:
+            return [SlotSet("sector", sector)]
         return [SlotSet("module", module)]
 
 

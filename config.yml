@@ -26,24 +26,28 @@ language: fr  # Set language to French
 
 pipeline:
   - name: WhitespaceTokenizer
+  - name: RegexEntityExtractor  # Ensure this comes before DIETClassifier
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-#  - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
   - name: LanguageModelFeaturizer
-    model_name: "camembert"  # Use CamemBERT model
+    model_name: "camembert"
     model_weights: "camembert-base"
   - name: DIETClassifier
-    epochs: 100
+    epochs: 300
+    batch_size: [32, 128]
+    constrain_similarities: true
   - name: EntitySynonymMapper
+  - name: SpacyNLP
+    model: "fr_core_news_md"
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-
-
+    threshold: 0.25
+    ambiguity_threshold: 0.10
 
 # Configuration for Rasa Core policies
 policies:

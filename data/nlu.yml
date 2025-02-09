@@ -68,26 +68,32 @@ nlu:
   examples: |
     - Quels sont les éléments dans [Conception UML](module) ?
     - Quels sont les éléments dans [Mathématiques 1](module) ?
-    - Quels sont les éléments dans [Agroenvironnement des Fluides](module) ?
+    - Quels sont les éléments dans [MULTIMEDIA](module) ?
     - Pouvez-vous lister les éléments de [Programmation Orientée Objet](module) ?
-    - Dites-moi les éléments dans le module [Programmation Orientée Objet](module).
-    - Listez les éléments du module [Science des Matériaux](module).
+    - Dites-moi les éléments dans le module [COMMUNICATION](module).
+    - Listez les éléments du module [Math](module).
     - Listez les éléments du module [Agroenvironnement des Fluides](module).
     - Listez les éléments du module [Programmation Orientée Objet](module).
     - Pouvez-vous lister les éléments de [Programmation Orientée Objet](module)?
     - Pouvez-vous lister les éléments de [Bases De Données](module)?
-    - Quelles sont les parties couvertes dans [Théorie des Graphes](module) ?
+    - Quelles sont les parties couvertes dans [Systèmes D'exploitation](module) ?
     - Quels sont les sujets étudiés dans [Systèmes d’Exploitation](module) ?
-    - Qu’est-ce qui est inclus dans [Électronique Analogique](module) ?
-    - Listez tous les contenus de [Structures Algébriques](module).
-    - Dites-moi les composants du module [Cryptographie et Sécurité](module).
+    - Qu’est-ce qui est inclus dans [Reseaux](module) ?
+    - Listez tous les contenus de [Systèmes D'exploitation](module).
+    - Dites-moi les composants du module [Réseaux Informatiques](module).
     - Pouvez-vous lister les éléments de [Oracle](module) ?
+    - Pouvez-vous lister les éléments de [Algorithmique](element)?
+    - Quels sont les aspects principaux du [Génie informatique](sector)?
+    - Quels sont les éléments qui composent le [informatique](sector)?
+    - Pouvez-vous énumérer les composantes du [GI](sector)?
+    - Pouvez-vous lister les éléments de [Langues](module)?
+    - Pouvez-vous lister les éléments qui dans [Genie informatique](sector) ?
 - intent: ask_element_teacher
   examples: |
     - Qui enseigne [Variables et Types de Données](element) ?
     - Quel professeur est responsable de [Thermodynamique](element) ?
     - Dites-moi le professeur pour [Dynamique des Fluides](element).
-    - Qui est le professeur pour l'élément [Dynamique Avancée](element) ?
+    - Qui est le professeur pour l'élément [Bureautique](element) ?
     - Quel professeur est responsable de [Bases de Python](element) ?
     - Qui est le professeur pour l'élément [Analyse 1](element)?
     - Qui est le professeur pour l'élément [Analyse 2](element)?
@@ -130,35 +136,56 @@ nlu:
     - TM
     - Techniques
     - Management
+- synonym: mathématiques
+  examples: |
+    - Math
+    - math
+    - maths
+    - mathématique
+    - les maths
+    - les mathématique
 - regex: Semester
   examples: |
     - S[1-6]
+- regex: module
+  examples: |
+    - [A-Z]{2,}  # Matches uppercase words like "PFE", "STAGES"
 - lookup: module
   examples: |
-    - Oracle
-    - Conception UML
-    - Mathématiques 1
-    - Mathématiques 2
-    - Programmation Orientée Objet Java
     - Langues Et Organisation D'entreprise
+    - Physique Pour L'informatique
+    - Mathématiques 1
+    - Éléments Basiques De L'informatique
+    - Algorithmique Et Programmation C Avancée
+    - Systèmes D'exploitation & Réseaux Informatiques
+    - Mathématiques 2
+    - Réseaux Avancés & Développement Web
     - Base De Données Avancées Oracle
-    - Programmation Python
-    - Intelligence Artificielle
-    - Gestion des Projets
-    - Algorithmes et Structures de Données
-    - Analyse des Données
-    - Calcul Numérique
-    - Réseaux Informatiques
-    - Conception de Circuits Numériques
-    - Programmation Web Avancée
-    - Machine Learning
-    - Simulation et Modélisation
-    - Systèmes d'Information Géographique
-    - Développement d'Applications Mobiles
-    - Analyse et Conception Orientée Objet
-    - Sécurité Informatique
-    - Big Data
-    - Deep Learning
+    - Programmation Orientée Objet Java
+    - Conception UML
+    - STAGES
+    - PFE
+    - COMMUNICATION, TECHNIQUE ET GESTION DE PROJETS
+    - GÉNIE LOGICIEL ET MULTIMÉDIA.
+- lookup: element
+  examples: |
+    - Programmation Orientée Objet Java
+    - Web 2
+    - Analyse 1
+    - Analyse 2
+    - Algèbre 1
+    - Algèbre 2
+    - Algorithmique
+    - Langage de programmation C
+    - Bureautique
+    - Français et Tec
+    - Anglais
+    - Organisation et droit d'entreprise
+    - Bases De Données Avancées
+    - Réseaux Avancés
+    - Développement Web
+    - Structure de Données
+    - Introduction à la Programmation Orientée Objet C++
 - lookup: sector
   examples: |
     - Génie Informatique

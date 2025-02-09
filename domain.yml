@@ -7,9 +7,9 @@ intents:
 - ask_semesters
 - greet
 entities:
-- element
 - module
 - sector
+- element
 - semester
 slots:
   sector:
@@ -53,13 +53,13 @@ responses:
   utter_default:
   - text: Désolé, je n'ai pas bien compris. Pouvez-vous reformuler ?
 actions:
-- action_list_element_teacher
 - action_list_elements
+- utter_greet
+- action_list_element_teacher
 - action_list_modules
 - action_list_sectors
 - action_list_semesters
 - utter_goodbye
-- utter_greet
 - action_default_fallback
 session_config:
   session_expiration_time: 60

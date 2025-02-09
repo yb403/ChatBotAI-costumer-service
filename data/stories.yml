@@ -230,3 +230,33 @@ stories:
     entities:
     - element: Web 2
   - action: action_list_element_teacher
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_elements
+    entities:
+    - element: Algorithmique
+  - slot_was_set:
+    - element: Algorithmique
+  - action: action_list_elements
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_elements
+    entities:
+    - module: Langues
+  - slot_was_set:
+    - module: Langues
+  - action: action_list_elements
+  - slot_was_set:
+    - module: Langues
+  - intent: ask_elements
+    entities:
+    - sector: Genie informatique
+  - slot_was_set:
+    - sector: Genie informatique
+  - action: action_list_elements
+  - slot_was_set:
+    - module: Langues
