@@ -3,10 +3,13 @@ intents:
 - ask_element_teacher
 - ask_elements
 - ask_modules
+- ask_professor_email
 - ask_sectors
 - ask_semesters
 - greet
 entities:
+- last_name
+- first_name
 - module
 - sector
 - element
@@ -35,6 +38,18 @@ slots:
     mappings:
     - type: from_entity
       entity: element
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: last_name
 responses:
   utter_list_sectors:
   - text: 'Les filières disponibles sont : {sectors}'
@@ -53,6 +68,7 @@ responses:
   utter_default:
   - text: Désolé, je n'ai pas bien compris. Pouvez-vous reformuler ?
 actions:
+- action_provide_professor_email
 - action_list_elements
 - utter_greet
 - action_list_element_teacher

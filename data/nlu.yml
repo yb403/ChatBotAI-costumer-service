@@ -99,6 +99,25 @@ nlu:
     - Qui est le professeur pour l'élément [Analyse 2](element)?
     - Qui est le professeur pour l'élément [Algorithmique](element) ?
     - Quel professeur est responsable de [Web 2](element) ?
+- intent: ask_professor_email
+  examples: |
+    - Quel est l'email du professeur [Baddi] (last_name) ?
+    - Donne-moi l'email de [Youssef] (first_name), s'il te plaît.
+    - Peux-tu me donner l'email de [Saidi Abdelali] (first_name last_name) ?
+    - J'ai besoin de l'email de [Zouani] (first_name).
+    - Est-ce que tu connais l'email de [Mabrouk Abdelftah] (first_name last_name) ?
+    - Où puis-je trouver l'email de [Charkaoui Badreddine] (first_name last_name) ?
+    - Comment puis-je contacter [El Aroussi El Mehdi] (first_name last_name) par mail ?
+    - Donne-moi l'adresse électronique de [Bahraoui Zuhair] (first_name last_name).
+    - Je cherche l'email de [El Rhoubari Zineb] (first_name last_name).
+    - Est-ce que tu peux me donner l'email de [Martin] (last_name) ?
+    - Quel est l'email du professeur [Baddi](last_name) ?
+    - Où puis-je trouver l'email de [Charkaoui](last_name) [Badreddine](first_name) ?
+    - Je cherche l'email du professeur [Charkaoui](last_name) [Badreddine](first_name).
+    - Comment contacter [Badreddine](last_name) [Charkaoui](first_name) par email ?
+    - Quel est l'email du professeur [Charkaoui](last_name) [Badreddine](first_name) ?
+    - Quel est l'email du professeur [Baddi][{"entity": "last_name"}, {"entity": "last_name"}] ?
+    - Quel est l'email du professeur [CHARKAOUI][{"entity": "last_name", "value": "Charkaoui"}, {"entity": "last_name", "value": "Charkaoui"}] ?
 - synonym: Semester 1
   examples: |
     - S1
@@ -194,3 +213,49 @@ nlu:
     - GI
     - GA
     - TM
+- lookup: first_name
+  examples: |
+    - Youssef
+    - Yassine
+    - Ahmed
+    - Mohamed
+    - Fatima
+    - Meryem
+    - Hassan
+    - Samira
+    - Khalid
+    - Khalil
+    - Zineb
+    - Mounir
+    - Sara
+    - Sami
+    - Rachid
+    - Nadia
+    - Hiba
+    - Karim
+    - Siham
+    - Rami
+    - Anwar
+    - Ismail
+    - Asmaa
+    - Imane
+    - Zineb
+    - Oumaima
+    - Wafaa
+    - Salma
+    - Nabil
+    - Amina
+    - Reda
+    - Hicham
+- lookup: last_name
+  examples: |
+    - Baddi
+    - Toumi
+    - Saidi
+    - Zouani
+    - Mabrouk
+    - Charkaoui
+    - Aroussi
+    - Bahraoui
+    - Rhoubari
+    - Boutabia

@@ -262,7 +262,58 @@ class ActionListElementTeacher(Action):
         return [SlotSet("element", element)]
 
 
+class ActionProvideProfessorEmail(Action):
+    def name(self) -> str:
+        return "action_provide_professor_email"
 
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: "Tracker",
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        first_name = tracker.get_slot("first_name")
+        last_name = tracker.get_slot("last_name")
+        print(first_name,last_name)
+        if not first_name and not last_name:
+            dispatcher.utter_message(text="Pouvez-vous me donner au moins le prénom ou le nom de famille du professeur ?")
+            return []
+        
+        # Connect to the database
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="chatbot"
+        )
+        cursor = connection.cursor()
+
+        # Build the query based on available information
+        query = "SELECT email FROM Teacher WHERE"
+        conditions = []
+        params = []
+
+        if first_name:
+            conditions.append(" fname LIKE %s")
+            params.append(f"%{first_name}%")  # Add wildcards for partial matches
+
+        if last_name:
+            conditions.append(" lname LIKE %s")
+            params.append(f"%{last_name}%")  # Add wildcards for partial matches
+
+        query += " AND".join(conditions)
+        print(query)
+        cursor.execute(query, tuple(params))
+        result = cursor.fetchone()
+        
+        if result:
+            email = result[0]
+            dispatcher.utter_message(text=f"L'email de ce professeur est : {email}")
+        else:
+            dispatcher.utter_message(text="Désolé, je n'ai pas trouvé l'email de ce professeur.")
+        
+        cursor.close()
+        connection.close()
+        
+        return []
 class ActionDefaultFallback(Action):
     def name(self) -> str:
         return "action_default_fallback"

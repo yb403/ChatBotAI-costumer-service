@@ -260,3 +260,28 @@ stories:
   - action: action_list_elements
   - slot_was_set:
     - module: Langues
+- story: Ask for professor email
+  steps:
+  - intent: ask_professor_email
+    entities:
+      - first_name: Hicham
+  - slot_was_set:
+      - first_name: Hicham
+  - action: action_provide_professor_email
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_professor_email
+    entities:
+    - last_name: Baddi
+    - last_name: Baddi
+  - slot_was_set:
+    - last_name: Baddi
+  - action: action_provide_professor_email
+  - intent: ask_professor_email
+    entities:
+    - last_name: Charkaoui
+    - last_name: Charkaoui
+  - slot_was_set:
+    - last_name: Charkaoui
+  - action: action_provide_professor_email
