@@ -215,6 +215,7 @@ nlu:
     - TM
 - lookup: first_name
   examples: |
+    - ZUHAIR 
     - Youssef
     - Yassine
     - Ahmed

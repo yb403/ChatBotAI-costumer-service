@@ -313,7 +313,7 @@ class ActionProvideProfessorEmail(Action):
         cursor.close()
         connection.close()
         
-        return []
+        return [SlotSet("first_name", None), SlotSet("last_name", None)]
 class ActionDefaultFallback(Action):
     def name(self) -> str:
         return "action_default_fallback"
