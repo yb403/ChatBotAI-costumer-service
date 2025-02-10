@@ -91,8 +91,8 @@ nlu:
 - intent: ask_element_teacher
   examples: |
     - Qui enseigne [Variables et Types de Données](element) ?
-    - Quel professeur est responsable de [Thermodynamique](element) ?
-    - Dites-moi le professeur pour [Dynamique des Fluides](element).
+    - Quel professeur est responsable de [Multimédia](element) ?
+    - Dites-moi le professeur pour [Réseaux Avancés](element).
     - Qui est le professeur pour l'élément [Bureautique](element) ?
     - Quel professeur est responsable de [Bases de Python](element) ?
     - Qui est le professeur pour l'élément [Analyse 1](element)?

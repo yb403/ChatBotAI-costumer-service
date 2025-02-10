@@ -1,0 +1,49 @@
+{
+  "module": {
+    "precision": 1.0,
+    "recall": 0.1111111111111111,
+    "f1-score": 0.19999999999999998,
+    "support": 36,
+    "confused_with": {}
+  },
+  "semester": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "sector": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589743,
+    "support": 60,
+    "confused_with": {}
+  },
+  "element": {
+    "precision": 1.0,
+    "recall": 0.55,
+    "f1-score": 0.7096774193548387,
+    "support": 20,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.5625,
+    "f1-score": 0.72,
+    "support": 128
+  },
+  "macro avg": {
+    "precision": 0.75,
+    "recall": 0.4027777777777778,
+    "f1-score": 0.4710090984284533,
+    "support": 128
+  },
+  "weighted avg": {
+    "precision": 0.90625,
+    "recall": 0.5625,
+    "f1-score": 0.6238678660049628,
+    "support": 128
+  },
+  "accuracy": 0.8955223880597015
+}

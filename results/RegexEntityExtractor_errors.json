@@ -1,0 +1,782 @@
+[
+  {
+    "text": "Quels modules sont dans le Semester 1 ?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 37,
+        "value": "Semester 1",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "semester",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9993146657943726,
+        "value": "Semester 1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Montrez-moi les modules du Semester 2.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 37,
+        "value": "Semester 2",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "semester",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9994297623634338,
+        "value": "Semester 2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels modules sont dans le S1 ?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 29,
+        "value": "S1",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "semester",
+        "start": 27,
+        "end": 29,
+        "confidence_entity": 0.9991996884346008,
+        "value": "Semester 1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Montrez-moi les modules du S3.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 29,
+        "value": "S3",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "semester",
+        "start": 27,
+        "end": 29,
+        "confidence_entity": 0.999515175819397,
+        "value": "Semester 3",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels cours sont disponibles dans le Semester 1 de Génie Informatique ?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 47,
+        "value": "Semester 1",
+        "entity": "semester"
+      },
+      {
+        "start": 51,
+        "end": 69,
+        "value": "Génie Informatique",
+        "entity": "sector"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 51,
+        "end": 69,
+        "value": "Génie Informatique",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "semester",
+        "start": 37,
+        "end": 47,
+        "confidence_entity": 0.9994723200798035,
+        "value": "Semester 1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sector",
+        "start": 51,
+        "end": 69,
+        "confidence_entity": 0.9998948574066162,
+        "value": "Génie Informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels cours sont disponibles dans le S1 de Génie Informatique ?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 39,
+        "value": "S1",
+        "entity": "semester"
+      },
+      {
+        "start": 43,
+        "end": 61,
+        "value": "Génie Informatique",
+        "entity": "sector"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 43,
+        "end": 61,
+        "value": "Génie Informatique",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "semester",
+        "start": 37,
+        "end": 39,
+        "confidence_entity": 0.9992625117301941,
+        "value": "Semester 1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sector",
+        "start": 43,
+        "end": 61,
+        "confidence_entity": 0.9999018907546997,
+        "value": "Génie Informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels sont les cours en Techniques de Management dans le Semester 2 ?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 48,
+        "value": "Techniques de Management",
+        "entity": "sector"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "Semester 2",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 24,
+        "end": 48,
+        "value": "Techniques de Management",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sector",
+        "start": 24,
+        "end": 48,
+        "confidence_entity": 0.9991394281387329,
+        "value": "Techniques de Management",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "semester",
+        "start": 57,
+        "end": 67,
+        "confidence_entity": 0.9992868304252625,
+        "value": "Semester 2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels sont les cours en Génie Informatique dans le S2 ?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 42,
+        "value": "Génie Informatique",
+        "entity": "sector"
+      },
+      {
+        "start": 51,
+        "end": 53,
+        "value": "S2",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 24,
+        "end": 42,
+        "value": "Génie Informatique",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sector",
+        "start": 24,
+        "end": 42,
+        "confidence_entity": 0.99981290102005,
+        "value": "Génie Informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "semester",
+        "start": 51,
+        "end": 53,
+        "confidence_entity": 0.9994494318962097,
+        "value": "Semester 2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels sont les éléments dans MULTIMEDIA ?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 39,
+        "value": "MULTIMEDIA",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 29,
+        "end": 39,
+        "confidence_entity": 0.9995500445365906,
+        "value": "MULTIMEDIA",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments de Programmation Orientée Objet ?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 63,
+        "value": "Programmation Orientée Objet",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 63,
+        "confidence_entity": 0.9996446371078491,
+        "value": "Programmation Orientée Objet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Dites-moi les éléments dans le module COMMUNICATION.",
+    "entities": [
+      {
+        "start": 38,
+        "end": 51,
+        "value": "COMMUNICATION",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 38,
+        "end": 51,
+        "confidence_entity": 0.9996365308761597,
+        "value": "COMMUNICATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Listez les éléments du module Math.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 34,
+        "value": "Math",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 30,
+        "end": 34,
+        "confidence_entity": 0.9994369149208069,
+        "value": "mathématiques",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Listez les éléments du module Agroenvironnement des Fluides.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 59,
+        "value": "Agroenvironnement des Fluides",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 30,
+        "end": 59,
+        "confidence_entity": 0.998608410358429,
+        "value": "Agroenvironnement des Fluides",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Listez les éléments du module Programmation Orientée Objet.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 58,
+        "value": "Programmation Orientée Objet",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 30,
+        "end": 58,
+        "confidence_entity": 0.9996371269226074,
+        "value": "Programmation Orientée Objet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments de Programmation Orientée Objet?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 63,
+        "value": "Programmation Orientée Objet",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 63,
+        "confidence_entity": 0.9996446371078491,
+        "value": "Programmation Orientée Objet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments de Bases De Données?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 51,
+        "value": "Bases De Données",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 51,
+        "confidence_entity": 0.9983571171760559,
+        "value": "Bases De Données",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quelles sont les parties couvertes dans Systèmes D'exploitation ?",
+    "entities": [
+      {
+        "start": 40,
+        "end": 63,
+        "value": "Systèmes D'exploitation",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 40,
+        "end": 63,
+        "confidence_entity": 0.9995965361595154,
+        "value": "Systèmes D'exploitation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels sont les sujets étudiés dans Systèmes d’Exploitation ?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 58,
+        "value": "Systèmes d’Exploitation",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 58,
+        "confidence_entity": 0.9993652701377869,
+        "value": "Systèmes d’Exploitation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Qu’est-ce qui est inclus dans Reseaux ?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 37,
+        "value": "Reseaux",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.999415397644043,
+        "value": "Reseaux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Listez tous les contenus de Systèmes D'exploitation.",
+    "entities": [
+      {
+        "start": 28,
+        "end": 51,
+        "value": "Systèmes D'exploitation",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 28,
+        "end": 51,
+        "confidence_entity": 0.9996784925460815,
+        "value": "Systèmes D'exploitation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Dites-moi les composants du module Réseaux Informatiques.",
+    "entities": [
+      {
+        "start": 35,
+        "end": 56,
+        "value": "Réseaux Informatiques",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 56,
+        "confidence_entity": 0.9991028308868408,
+        "value": "Réseaux Informatiques",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments de Oracle ?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 41,
+        "value": "Oracle",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.9997168183326721,
+        "value": "Oracle",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quels sont les éléments qui composent le informatique?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 53,
+        "value": "informatique",
+        "entity": "sector"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 41,
+        "end": 53,
+        "confidence_entity": 0.9991940855979919,
+        "value": "Génie Informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments de Langues?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 42,
+        "value": "Langues",
+        "entity": "module"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "module",
+        "start": 35,
+        "end": 42,
+        "confidence_entity": 0.9996470212936401,
+        "value": "Langues",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pouvez-vous lister les éléments qui dans Genie informatique ?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 59,
+        "value": "Genie informatique",
+        "entity": "sector"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sector",
+        "start": 41,
+        "end": 59,
+        "confidence_entity": 0.9995909333229065,
+        "value": "Genie informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Qui enseigne Variables et Types de Données ?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 42,
+        "value": "Variables et Types de Données",
+        "entity": "element"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "element",
+        "start": 13,
+        "end": 42,
+        "confidence_entity": 0.998847246170044,
+        "value": "Variables et Types de Données",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quel professeur est responsable de Multimédia ?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 45,
+        "value": "Multimédia",
+        "entity": "element"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "element",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.9991785883903503,
+        "value": "Multimédia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quel professeur est responsable de Bases de Python ?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 50,
+        "value": "Bases de Python",
+        "entity": "element"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "element",
+        "start": 35,
+        "end": 50,
+        "confidence_entity": 0.9985920786857605,
+        "value": "Bases de Python",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]
