@@ -22,11 +22,11 @@ assistant_id: 20241019-012950-interior-idea
 #     epochs: 100
 #     constrain_similarities: true
 
-language: fr  # Set language to French
+language: fr
 
 pipeline:
   - name: WhitespaceTokenizer
-  - name: RegexEntityExtractor  # Ensure this comes before DIETClassifier
+  - name: RegexEntityExtractor
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -49,21 +49,27 @@ pipeline:
     threshold: 0.25
     ambiguity_threshold: 0.10
 
-# Configuration for Rasa Core policies
 policies:
-  # RulePolicy for managing dialogue flows based on rules
   - name: RulePolicy
-  # MemoizationPolicy for remembering previous interactions to improve prediction
   - name: MemoizationPolicy
-  # TEDPolicy to manage more complex conversations and improve memory-based dialogue management
   - name: TEDPolicy
     max_history: 5
     epochs: 100
     batch_size: 32
     random_seed: 42
-  # Reinforcement learning policy for continuous improvement in complex conversations (optional)
   - name: AugmentedMemoizationPolicy
     max_history: 5
+
+core:
+  policies:
+    - name: MemoizationPolicy
+    - name: RulePolicy
+    - name: TEDPolicy
+
+
+
+
+
 
 # NLU configuration
 #nlu:
@@ -78,8 +84,3 @@ policies:
 #rasa run --enable-api --cors "*"
 
 # Policies for the dialogue management
-core:
-  policies:
-    - name: MemoizationPolicy
-    - name: RulePolicy
-    - name: TEDPolicy
