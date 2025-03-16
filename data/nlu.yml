@@ -8,17 +8,27 @@ nlu:
     - bonjour à vous
     - bon matin
     - bonsoir
-    - hé
     - salut toi
     - allons-y
     - salut mec
     - bonne matinée
     - bonne soirée
     - bon après-midi
-    - exit
     - hello
     - hi
     - hey
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - À bientôt
+    - À plus tard
+    - À la prochaine
+    - Salut
+    - Bye
+    - Bonne journée
+    - Bonne soirée
+    - Je dois y aller
+    - On se revoit plus tard
 - intent: ask_sectors
   examples: |
     - Quels filières sont disponibles ?
@@ -90,7 +100,7 @@ nlu:
     - Pouvez-vous lister les éléments qui dans [Genie informatique](sector) ?
 - intent: ask_element_teacher
   examples: |
-    - Qui enseigne [Variables et Types de Données](element) ?
+    - Qui enseigne [VB.NET](element) ?
     - Quel professeur est responsable de [Multimédia](element) ?
     - Dites-moi le professeur pour [Réseaux Avancés](element).
     - Qui est le professeur pour l'élément [Bureautique](element) ?
@@ -118,6 +128,30 @@ nlu:
     - Quel est l'email du professeur [Charkaoui](last_name) [Badreddine](first_name) ?
     - Quel est l'email du professeur [Baddi][{"entity": "last_name"}, {"entity": "last_name"}] ?
     - Quel est l'email du professeur [CHARKAOUI][{"entity": "last_name", "value": "Charkaoui"}, {"entity": "last_name", "value": "Charkaoui"}] ?
+- intent: out_of_scope
+  examples: |
+    - Combien de continents y a-t-il ?
+    - Où se trouve la Tour Eiffel ?
+    - Comment s'appelle la plus grande mer du monde ?
+    - Quel est le capital de l'Allemagne ?
+    - Comment fonctionne un moteur à combustion ?
+    - Qui a écrit "Les Misérables" ?
+    - Quelles sont les étapes pour devenir astronaute ?
+    - Où se trouve le Machu Picchu ?
+    - Combien de pays y a-t-il en Afrique ?
+    - Quel est l'âge de la Terre ?
+    - Comment faire un gâteau au chocolat ?
+    - Quel est le score du dernier match de foot ?
+    - Quelle est la formule chimique de l'eau ?
+    - Qui a inventé l'ampoule électrique ?
+    - Où puis-je acheter une voiture neuve ?
+    - Quel est le dernier film de Marvel ?
+    - Qu'est-ce que le Big Bang ?
+    - Comment obtenir un visa pour les États-Unis ?
+    - Quelle est la capitale de la France ?
+    - Quelle est la capitale de l'Espagne ?
+    - Quel est le meilleur restaurant près d'ici ?
+
 - synonym: Semester 1
   examples: |
     - S1

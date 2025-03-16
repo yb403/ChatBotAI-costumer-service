@@ -14,7 +14,7 @@
         "entity": "semester",
         "start": 27,
         "end": 37,
-        "confidence_entity": 0.9993146657943726,
+        "confidence_entity": 0.990399181842804,
         "value": "Semester 1",
         "extractor": "DIETClassifier",
         "processors": [
@@ -38,7 +38,7 @@
         "entity": "semester",
         "start": 27,
         "end": 37,
-        "confidence_entity": 0.9994297623634338,
+        "confidence_entity": 0.9857373237609863,
         "value": "Semester 2",
         "extractor": "DIETClassifier",
         "processors": [
@@ -62,7 +62,7 @@
         "entity": "semester",
         "start": 27,
         "end": 29,
-        "confidence_entity": 0.9991996884346008,
+        "confidence_entity": 0.9976661205291748,
         "value": "Semester 1",
         "extractor": "DIETClassifier",
         "processors": [
@@ -86,7 +86,7 @@
         "entity": "semester",
         "start": 27,
         "end": 29,
-        "confidence_entity": 0.999515175819397,
+        "confidence_entity": 0.9956089854240417,
         "value": "Semester 3",
         "extractor": "DIETClassifier",
         "processors": [
@@ -126,7 +126,7 @@
         "entity": "semester",
         "start": 37,
         "end": 47,
-        "confidence_entity": 0.9994723200798035,
+        "confidence_entity": 0.9952175617218018,
         "value": "Semester 1",
         "extractor": "DIETClassifier",
         "processors": [
@@ -137,7 +137,7 @@
         "entity": "sector",
         "start": 51,
         "end": 69,
-        "confidence_entity": 0.9998948574066162,
+        "confidence_entity": 0.9997134804725647,
         "value": "Génie Informatique",
         "extractor": "DIETClassifier",
         "processors": [
@@ -177,7 +177,7 @@
         "entity": "semester",
         "start": 37,
         "end": 39,
-        "confidence_entity": 0.9992625117301941,
+        "confidence_entity": 0.9976221919059753,
         "value": "Semester 1",
         "extractor": "DIETClassifier",
         "processors": [
@@ -188,7 +188,7 @@
         "entity": "sector",
         "start": 43,
         "end": 61,
-        "confidence_entity": 0.9999018907546997,
+        "confidence_entity": 0.9998194575309753,
         "value": "Génie Informatique",
         "extractor": "DIETClassifier",
         "processors": [
@@ -228,7 +228,7 @@
         "entity": "sector",
         "start": 24,
         "end": 48,
-        "confidence_entity": 0.9991394281387329,
+        "confidence_entity": 0.9941585063934326,
         "value": "Techniques de Management",
         "extractor": "DIETClassifier",
         "processors": [
@@ -239,7 +239,7 @@
         "entity": "semester",
         "start": 57,
         "end": 67,
-        "confidence_entity": 0.9992868304252625,
+        "confidence_entity": 0.9973369240760803,
         "value": "Semester 2",
         "extractor": "DIETClassifier",
         "processors": [
@@ -279,7 +279,7 @@
         "entity": "sector",
         "start": 24,
         "end": 42,
-        "confidence_entity": 0.99981290102005,
+        "confidence_entity": 0.9997274279594421,
         "value": "Génie Informatique",
         "extractor": "DIETClassifier",
         "processors": [
@@ -290,7 +290,7 @@
         "entity": "semester",
         "start": 51,
         "end": 53,
-        "confidence_entity": 0.9994494318962097,
+        "confidence_entity": 0.9986341595649719,
         "value": "Semester 2",
         "extractor": "DIETClassifier",
         "processors": [
@@ -314,7 +314,7 @@
         "entity": "module",
         "start": 29,
         "end": 39,
-        "confidence_entity": 0.9995500445365906,
+        "confidence_entity": 0.9978393316268921,
         "value": "MULTIMEDIA",
         "extractor": "DIETClassifier",
         "processors": [
@@ -338,7 +338,7 @@
         "entity": "module",
         "start": 35,
         "end": 63,
-        "confidence_entity": 0.9996446371078491,
+        "confidence_entity": 0.9975324869155884,
         "value": "Programmation Orientée Objet",
         "extractor": "DIETClassifier",
         "processors": [
@@ -362,7 +362,7 @@
         "entity": "module",
         "start": 38,
         "end": 51,
-        "confidence_entity": 0.9996365308761597,
+        "confidence_entity": 0.9978101849555969,
         "value": "COMMUNICATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -386,7 +386,7 @@
         "entity": "module",
         "start": 30,
         "end": 34,
-        "confidence_entity": 0.9994369149208069,
+        "confidence_entity": 0.9979305267333984,
         "value": "mathématiques",
         "extractor": "DIETClassifier",
         "processors": [
@@ -410,7 +410,7 @@
         "entity": "module",
         "start": 30,
         "end": 59,
-        "confidence_entity": 0.998608410358429,
+        "confidence_entity": 0.9940296411514282,
         "value": "Agroenvironnement des Fluides",
         "extractor": "DIETClassifier",
         "processors": [
@@ -434,7 +434,7 @@
         "entity": "module",
         "start": 30,
         "end": 58,
-        "confidence_entity": 0.9996371269226074,
+        "confidence_entity": 0.998458981513977,
         "value": "Programmation Orientée Objet",
         "extractor": "DIETClassifier",
         "processors": [
@@ -458,7 +458,7 @@
         "entity": "module",
         "start": 35,
         "end": 63,
-        "confidence_entity": 0.9996446371078491,
+        "confidence_entity": 0.9975324869155884,
         "value": "Programmation Orientée Objet",
         "extractor": "DIETClassifier",
         "processors": [
@@ -482,7 +482,7 @@
         "entity": "module",
         "start": 35,
         "end": 51,
-        "confidence_entity": 0.9983571171760559,
+        "confidence_entity": 0.9941708445549011,
         "value": "Bases De Données",
         "extractor": "DIETClassifier",
         "processors": [
@@ -506,7 +506,7 @@
         "entity": "module",
         "start": 40,
         "end": 63,
-        "confidence_entity": 0.9995965361595154,
+        "confidence_entity": 0.9930403232574463,
         "value": "Systèmes D'exploitation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -530,7 +530,7 @@
         "entity": "module",
         "start": 35,
         "end": 58,
-        "confidence_entity": 0.9993652701377869,
+        "confidence_entity": 0.9975094795227051,
         "value": "Systèmes d’Exploitation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -554,7 +554,7 @@
         "entity": "module",
         "start": 30,
         "end": 37,
-        "confidence_entity": 0.999415397644043,
+        "confidence_entity": 0.9934329986572266,
         "value": "Reseaux",
         "extractor": "DIETClassifier",
         "processors": [
@@ -578,7 +578,7 @@
         "entity": "module",
         "start": 28,
         "end": 51,
-        "confidence_entity": 0.9996784925460815,
+        "confidence_entity": 0.9956039190292358,
         "value": "Systèmes D'exploitation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -602,7 +602,7 @@
         "entity": "module",
         "start": 35,
         "end": 56,
-        "confidence_entity": 0.9991028308868408,
+        "confidence_entity": 0.9979812502861023,
         "value": "Réseaux Informatiques",
         "extractor": "DIETClassifier",
         "processors": [
@@ -626,7 +626,7 @@
         "entity": "module",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9997168183326721,
+        "confidence_entity": 0.9954659938812256,
         "value": "Oracle",
         "extractor": "DIETClassifier",
         "processors": [
@@ -650,7 +650,7 @@
         "entity": "sector",
         "start": 41,
         "end": 53,
-        "confidence_entity": 0.9991940855979919,
+        "confidence_entity": 0.9984135627746582,
         "value": "Génie Informatique",
         "extractor": "DIETClassifier",
         "processors": [
@@ -674,7 +674,7 @@
         "entity": "module",
         "start": 35,
         "end": 42,
-        "confidence_entity": 0.9996470212936401,
+        "confidence_entity": 0.9974529147148132,
         "value": "Langues",
         "extractor": "DIETClassifier",
         "processors": [
@@ -698,7 +698,7 @@
         "entity": "sector",
         "start": 41,
         "end": 59,
-        "confidence_entity": 0.9995909333229065,
+        "confidence_entity": 0.9976398944854736,
         "value": "Genie informatique",
         "extractor": "DIETClassifier",
         "processors": [
@@ -722,7 +722,7 @@
         "entity": "element",
         "start": 13,
         "end": 42,
-        "confidence_entity": 0.998847246170044,
+        "confidence_entity": 0.9748265743255615,
         "value": "Variables et Types de Données",
         "extractor": "DIETClassifier",
         "processors": [
@@ -746,7 +746,7 @@
         "entity": "element",
         "start": 35,
         "end": 45,
-        "confidence_entity": 0.9991785883903503,
+        "confidence_entity": 0.9952787160873413,
         "value": "Multimédia",
         "extractor": "DIETClassifier",
         "processors": [
@@ -770,8 +770,349 @@
         "entity": "element",
         "start": 35,
         "end": 50,
-        "confidence_entity": 0.9985920786857605,
+        "confidence_entity": 0.9775658845901489,
         "value": "Bases de Python",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quel est l'email du professeur [Baddi] (last_name) ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 32,
+        "end": 37,
+        "value": "Baddi",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Donne-moi l'email de [Youssef] (first_name), s'il te plaît.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "first_name",
+        "start": 22,
+        "end": 29,
+        "value": "Youssef",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Peux-tu me donner l'email de [Saidi Abdelali] (first_name last_name) ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 30,
+        "end": 35,
+        "value": "Saidi",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "J'ai besoin de l'email de [Zouani] (first_name).",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 27,
+        "end": 33,
+        "value": "Zouani",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Est-ce que tu connais l'email de [Mabrouk Abdelftah] (first_name last_name) ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 34,
+        "end": 41,
+        "value": "Mabrouk",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Où puis-je trouver l'email de [Charkaoui Badreddine] (first_name last_name) ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 31,
+        "end": 40,
+        "value": "Charkaoui",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Comment puis-je contacter [El Aroussi El Mehdi] (first_name last_name) par mail ?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 30,
+        "end": 37,
+        "value": "Aroussi",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Donne-moi l'adresse électronique de [Bahraoui Zuhair] (first_name last_name).",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "first_name",
+        "start": 46,
+        "end": 52,
+        "value": "Zuhair",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "last_name",
+        "start": 37,
+        "end": 45,
+        "value": "Bahraoui",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Je cherche l'email de [El Rhoubari Zineb] (first_name last_name).",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "first_name",
+        "start": 35,
+        "end": 40,
+        "value": "Zineb",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "last_name",
+        "start": 26,
+        "end": 34,
+        "value": "Rhoubari",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Où puis-je trouver l'email de Charkaoui Badreddine ?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 39,
+        "value": "Charkaoui",
+        "entity": "last_name"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "Badreddine",
+        "entity": "first_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 30,
+        "end": 39,
+        "value": "Charkaoui",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "last_name",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9977920055389404,
+        "value": "Charkaoui",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "first_name",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.9986552000045776,
+        "value": "Badreddine",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je cherche l'email du professeur Charkaoui Badreddine.",
+    "entities": [
+      {
+        "start": 33,
+        "end": 42,
+        "value": "Charkaoui",
+        "entity": "last_name"
+      },
+      {
+        "start": 43,
+        "end": 53,
+        "value": "Badreddine",
+        "entity": "first_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 33,
+        "end": 42,
+        "value": "Charkaoui",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "last_name",
+        "start": 33,
+        "end": 42,
+        "confidence_entity": 0.999054491519928,
+        "value": "Charkaoui",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "first_name",
+        "start": 43,
+        "end": 53,
+        "confidence_entity": 0.9989559650421143,
+        "value": "Badreddine",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Comment contacter Badreddine Charkaoui par email ?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 28,
+        "value": "Badreddine",
+        "entity": "last_name"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "Charkaoui",
+        "entity": "first_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 29,
+        "end": 38,
+        "value": "Charkaoui",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "last_name",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.9758988618850708,
+        "value": "Badreddine",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "first_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9946854114532471,
+        "value": "Charkaoui",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quel est l'email du professeur Charkaoui Badreddine ?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 40,
+        "value": "Charkaoui",
+        "entity": "last_name"
+      },
+      {
+        "start": 41,
+        "end": 51,
+        "value": "Badreddine",
+        "entity": "first_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "last_name",
+        "start": 31,
+        "end": 40,
+        "value": "Charkaoui",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "last_name",
+        "start": 31,
+        "end": 40,
+        "confidence_entity": 0.9990687966346741,
+        "value": "Charkaoui",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "first_name",
+        "start": 41,
+        "end": 51,
+        "confidence_entity": 0.9989598989486694,
+        "value": "Badreddine",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"

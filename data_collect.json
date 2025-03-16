@@ -1,0 +1,17 @@
+{
+    "intents": [
+      {
+        "name": "ask_semesters",
+        "examples": [
+          "Quels Semesters sont dans le filière [Génie Informatique](sector) ?",
+          "Quels Semesters sont dans le filière [Techniques de Management](sector) ?",
+          "Montrez les Semesters du filière [Génie Informatique](sector)."
+        ],
+        "entities": ["sector"],
+        "responses": [
+          "Le filière {sector} comprend les Semesters suivants : S1, S2, S3, S4."
+        ]
+      }
+    ]
+  }
+  

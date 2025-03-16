@@ -1,5 +1,9 @@
 version: "3.1"
 rules:
+- rule: out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: action_default_fallback
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

@@ -142,7 +142,8 @@ class ActionListElements(Action):
             dispatcher.utter_message(text=f"Aucun élément trouvé pour le module {module}.")
         if sector != None:
             return [SlotSet("sector", sector)]
-        return [SlotSet("module", module)]
+        #return [SlotSet("module", module)]
+        return [SlotSet("module", None)]
 
 
 class ActionListElementTeacher(Action):
@@ -211,5 +212,5 @@ class ActionDefaultFallback(Action):
         return "action_default_fallback"
 
     async def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text="Désolé, je n'ai pas bien compris. Pouvez-vous reformuler ?")
+        dispatcher.utter_message(text="Désolé, je ne comprends pas cette question. Pouvez-vous reformuler ou poser une question sur les filières, les modules, ou les enseignants ?")
         return []

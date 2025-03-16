@@ -23,7 +23,6 @@ assistant_id: 20241019-012950-interior-idea
 #     constrain_similarities: true
 
 language: fr
-
 pipeline:
   - name: WhitespaceTokenizer
   - name: RegexEntityExtractor
@@ -46,8 +45,7 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.25
-    ambiguity_threshold: 0.10
+    threshold: 0.7
 
 policies:
   - name: RulePolicy

@@ -1,23 +1,9 @@
 {
-  "module": {
-    "precision": 1.0,
-    "recall": 0.1111111111111111,
-    "f1-score": 0.19999999999999998,
-    "support": 36,
-    "confused_with": {}
-  },
-  "semester": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "sector": {
-    "precision": 1.0,
-    "recall": 0.95,
-    "f1-score": 0.9743589743589743,
-    "support": 60,
+  "last_name": {
+    "precision": 0.4,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.5454545454545455,
+    "support": 7,
     "confused_with": {}
   },
   "element": {
@@ -27,23 +13,53 @@
     "support": 20,
     "confused_with": {}
   },
-  "micro avg": {
+  "first_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {
+      "last_name": 1
+    }
+  },
+  "semester": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "module": {
     "precision": 1.0,
-    "recall": 0.5625,
-    "f1-score": 0.72,
-    "support": 128
+    "recall": 0.1111111111111111,
+    "f1-score": 0.19999999999999998,
+    "support": 36,
+    "confused_with": {}
+  },
+  "sector": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589743,
+    "support": 60,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.8666666666666667,
+    "recall": 0.5611510791366906,
+    "f1-score": 0.6812227074235807,
+    "support": 139
   },
   "macro avg": {
-    "precision": 0.75,
-    "recall": 0.4027777777777778,
-    "f1-score": 0.4710090984284533,
-    "support": 128
+    "precision": 0.5666666666666667,
+    "recall": 0.4113756613756614,
+    "f1-score": 0.40491515652805976,
+    "support": 139
   },
   "weighted avg": {
-    "precision": 0.90625,
-    "recall": 0.5625,
-    "f1-score": 0.6238678660049628,
-    "support": 128
+    "precision": 0.8546762589928057,
+    "recall": 0.5611510791366906,
+    "f1-score": 0.6019659616317774,
+    "support": 139
   },
-  "accuracy": 0.8955223880597015
+  "accuracy": 0.9153936545240893
 }

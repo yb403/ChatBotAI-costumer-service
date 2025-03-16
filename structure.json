@@ -1,0 +1,245 @@
+[
+    {
+        "element_id": 15,
+        "element_name": "Français et Tec",
+        "prof_first_name": "BADREDDINE",
+        "prof_last_name": "CHARKAOUI",
+        "module_name": "Langues Et Organisation D'entreprise",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 16,
+        "element_name": "Anglais",
+        "prof_first_name": "AMINA",
+        "prof_last_name": "BOUTABIA",
+        "module_name": "Langues Et Organisation D'entreprise",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 17,
+        "element_name": "Organisation et droit d'entreprise",
+        "prof_first_name": "BADREDDINE",
+        "prof_last_name": "CHARKAOUI",
+        "module_name": "Langues Et Organisation D'entreprise",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 8,
+        "element_name": "Analyse 1",
+        "prof_first_name": "ZUHAIR",
+        "prof_last_name": "BAHRAOUI",
+        "module_name": "Mathématiques 1",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 10,
+        "element_name": "Algèbre 1",
+        "prof_first_name": "ZINEB",
+        "prof_last_name": "EL RHOUBARI",
+        "module_name": "Mathématiques 1",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 12,
+        "element_name": "Algorithmique",
+        "prof_first_name": "ABDELALI",
+        "prof_last_name": "SAIDI",
+        "module_name": "Éléments Basiques De L'informatique",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 13,
+        "element_name": "Langage de programmation C",
+        "prof_first_name": "BADREDDINE",
+        "prof_last_name": "CHARKAOUI",
+        "module_name": "Éléments Basiques De L'informatique",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 14,
+        "element_name": "Bureautique",
+        "prof_first_name": "BADREDDINE",
+        "prof_last_name": "CHARKAOUI",
+        "module_name": "Éléments Basiques De L'informatique",
+        "semester_name": "Semester 1",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 21,
+        "element_name": "Structure de Données",
+        "prof_first_name": "ABDELALI",
+        "prof_last_name": "SAIDI",
+        "module_name": "Algorithmique Et Programmation C Avancée",
+        "semester_name": "Semester 2",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 22,
+        "element_name": "Introduction à la Programmation Orientée Objet C++",
+        "prof_first_name": "YOUSSEF",
+        "prof_last_name": "BADDI",
+        "module_name": "Algorithmique Et Programmation C Avancée",
+        "semester_name": "Semester 2",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 9,
+        "element_name": "Analyse 2",
+        "prof_first_name": "ZINEB",
+        "prof_last_name": "EL RHOUBARI",
+        "module_name": "Mathématiques 2",
+        "semester_name": "Semester 2",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 11,
+        "element_name": "Algèbre 2",
+        "prof_first_name": "ZUHAIR",
+        "prof_last_name": "BAHRAOUI",
+        "module_name": "Mathématiques 2",
+        "semester_name": "Semester 2",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 19,
+        "element_name": "Réseaux Avancés",
+        "prof_first_name": "HICHAM",
+        "prof_last_name": "TOUMI",
+        "module_name": "Réseaux Avancés & Développement Web",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 20,
+        "element_name": "Développement Web",
+        "prof_first_name": "YOUNES",
+        "prof_last_name": "ZOUANI",
+        "module_name": "Réseaux Avancés & Développement Web",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 18,
+        "element_name": "Bases De Données Avancées",
+        "prof_first_name": "ABDELFETTAH",
+        "prof_last_name": "MABROUK",
+        "module_name": "Base De Données Avancées Oracle",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 6,
+        "element_name": "Programmation Orientée Objet Java",
+        "prof_first_name": "YOUSSEF",
+        "prof_last_name": "BADDI",
+        "module_name": "Programmation Orientée Objet Java",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 5,
+        "element_name": "Conception UML",
+        "prof_first_name": "MEHDI",
+        "prof_last_name": "EL AROUSSI",
+        "module_name": "Conception UML",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 7,
+        "element_name": "Web 2",
+        "prof_first_name": "HICHAM",
+        "prof_last_name": "TOUMI",
+        "module_name": "Conception UML",
+        "semester_name": "Semester 3",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 23,
+        "element_name": "Stage d'initiation",
+        "prof_first_name": "YOUSSEF",
+        "prof_last_name": "BADDI",
+        "module_name": "STAGES",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 24,
+        "element_name": "Stage technique",
+        "prof_first_name": "ABDELALI",
+        "prof_last_name": "SAIDI",
+        "module_name": "STAGES",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 25,
+        "element_name": "Projet De Fin D'études",
+        "prof_first_name": "YOUSSEF",
+        "prof_last_name": "BADDI",
+        "module_name": "PFE",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 26,
+        "element_name": "Français technique",
+        "prof_first_name": "ABDELFETTAH",
+        "prof_last_name": "MABROUK",
+        "module_name": "COMMUNICATION, TECHNIQUE ET GESTION DE PROJETS",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 27,
+        "element_name": "Anglais technique",
+        "prof_first_name": "AMINA",
+        "prof_last_name": "BOUTABIA",
+        "module_name": "COMMUNICATION, TECHNIQUE ET GESTION DE PROJETS",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 28,
+        "element_name": "Gestion de projets",
+        "prof_first_name": "ABDELFETTAH",
+        "prof_last_name": "MABROUK",
+        "module_name": "COMMUNICATION, TECHNIQUE ET GESTION DE PROJETS",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 29,
+        "element_name": "Atelier génie logiciel",
+        "prof_first_name": "MEHDI",
+        "prof_last_name": "EL AROUSSI",
+        "module_name": "GÉNIE LOGICIEL ET MULTIMÉDIA",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 30,
+        "element_name": "Multimédia",
+        "prof_first_name": "BADREDDINE",
+        "prof_last_name": "CHARKAOUI",
+        "module_name": "GÉNIE LOGICIEL ET MULTIMÉDIA",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    },
+    {
+        "element_id": 31,
+        "element_name": "Interface homme machine",
+        "prof_first_name": "YOUSSEF",
+        "prof_last_name": "BADDI",
+        "module_name": "GÉNIE LOGICIEL ET MULTIMÉDIA",
+        "semester_name": "Semester 4",
+        "sector_name": "Génie Informatique"
+    }
+]
